@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reddit Search</title>
+</head>
+<body>
+
+<form method="get" action="https://reddit.com/search">
+
+    <input type="text" id="RedditSearch" name="q" placeholder="Search Reddit Here!">
+
+    <label for="Search">Search Options</label>
+    <select id="Search" name="sort">
+        <option value="top">Top</option>
+        <option value="new">New</option>
+        <option value="relevance">Relevance</option>
+    </select>
+
+    <button type="submit">Cruise the information super highway</button>
+<!--reddit.com/search?q=cars-->
+</form>
+
+
+<br>
+<br>
+<br>
+
+<!--https://www.amazon.com/gp/site-directory=?q=Macbook+Pro&SearchQuery=new-->
+
+<form method="get" action="https://www.amazon.com/s/">
+
+    <input type="text" id="AmazonSearch" name="field-keywords"  placeholder="Search Amazon Here!">
+
+    <label for="Search">Search Options</label>
+    <select id="Search" name="sort">
+        <option value="price-asc-rank">Price: Low to High</option>
+        <option value="price-desc-rank">Price: High to Low</option>
+        <option value="relevanceblender">Relevance</option>
+        <option value="review-rank">Avg. Customer Review</option>
+        <option value="date-desc-rank">Newest Arrivals</option>
+    </select>
+
+    <button type="submit">Cruise the information super highway</button>
+
+</form>
+
+</body>
+</html>
+
+<!--Look in the search query url after you search to find the keywords typically near = and &-&-->

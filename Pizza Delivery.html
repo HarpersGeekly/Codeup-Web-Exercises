@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Delivery Form</title>
+
+    <style>
+        body {
+
+            /*background: url('http://prontony.com/images/background/bg01.jpg') no-repeat fixed;*/
+            background-size: cover;
+
+        }
+
+        /*http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2011/7/26/2/GT0303_pizza-dough_s4x3.jpg*/
+
+    .PizzaMain {
+        background-color: ;
+    }
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="Container">
+<form method="POST" action="http://requestb.in/------?">
+
+   <div class="PizzaMain">
+    <H1>Pizza Delivery</H1>
+    <p>
+        <label for="E-mail">What's your e-mail address?</label>
+        <input type="text" id="E-mail" name="emailaddress" placeholder="type your e-mail address here!">
+    </p>
+   </div>
+
+<div class="Toppings">
+    <H2>Choose your toppings!</H2>
+    </div>
+<div class="ToppingsCheckbox">
+    <input type="checkbox" id="cheese" value="cheese" name="toppings[]" checked>
+    <label for="cheese" >Cheese</label><br>
+    <input type="checkbox" id="pepperoni" value="pepperoni" name="toppings[]">
+    <label for="pepperoni">Pepperoni</label><br>
+    <input type="checkbox" id="ham" value="ham" name="toppings[]">
+    <label for="ham">Ham</label><br>
+    <input type="checkbox" id="sausage" value="sausage" name="toppings[]">
+    <label for="sausage">Sausage</label><br>
+    <input type="checkbox" id="veggies" value="veggies" name="toppings[]">
+    <label for="veggies">Peppers & Onions</label><br>
+    <input type="checkbox" id="pineapple" value="pineapple" name="toppings[]">
+    <label for="pineapple">Pineapple</label><br>
+    <input type="checkbox" id="Green Olives" value="Green Olives" name="toppings[]">
+    <label for="Green Olives">Green Olives</label><br>
+    <input type="checkbox" id="Everything" value="Everything" name="toppings[]">
+    <label for="Everything">Lay it on me, the works!</label><br>
+</div>
+
+<div class="Delivery">
+    <h2>Would you like a delivery for this order?</h2>
+    <label>
+        <input type="radio" name="Delivery" value="1">Yes, please deliver.
+    </label>
+    <label>
+        <input type="radio" name="Delivery" value="2">No thanks, I'll come to you.
+    </label>
+</div>
+
+<div class="Address">
+    <h2>If so, where do we deliver?</h2>
+    <p>
+        <label for="Address">Street Address</label>
+        <input id="Address" name="Address" type="text">
+    </p>
+    <p>
+        <label for="ZipCode">Zip Code</label>
+        <input id="ZipCode" name="Address" type="text">
+    </p>
+</div>
+
+
+    <div class="submit">
+    <h2>Your delicious pizza pie is a click away!</h2>
+    <p>
+        <button type="submit" id="submit">Order Now!</button>
+    </p>
+    </div>
+</div>
+</form>
+</body>
+</html>
+
+
+<!--Create an html form for ordering a pizza. It should at least have
+
+input field for your email
+checkboxes for toppings
+radio buttons for pickup or delivery
+a select dropdown for type of crust
+-->
+

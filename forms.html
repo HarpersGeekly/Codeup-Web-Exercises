@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form method="get" action="http://www.google.com/search">
+    <label for="q">Search term</label>
+    <input type="text" id="q" name="q" placeholder="Search something"> <!--name attributes are required and then same as 'for' -->
+
+    <input type="hidden" name="secret" value="mysecret"> <!--just playing with these-->
+
+    <input type="password" name="password" placeholder="Your Password Goes Here"> <!-- creates a password with hidden text, however google during this practice
+    didn't let us send a password after changing"get" to "post because they have security parameters-->
+    <input type="submit">
+
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">checkbox</label>
+
+    <input type="radio" id="radio"> <!-- inputs don't have closing tags.-->
+    <label for="radio">radio</label>
+
+    <br>
+    <textarea name="bigtext" rows="10" cols="50" placeholder="Enter text here."></textarea> <!-- people can still drag to increase -->
+
+    <input type="submit">
+</form>
+
+<form>
+    <h1>Checkboxes</h1>
+    <input type="checkbox" id="red" value="red" name="color">
+    <label for="red">Red</label><br>
+    <input type="checkbox" id="green" value="green" name="color">
+    <label for="green">Green</label><br>
+    <input type="checkbox" id="blue" value="blue" name="color">
+    <label for="blue">Blue</label>
+
+
+    <h1>Radios</h1>
+    <p>What is the capital of Texas?</p>
+
+<!--<labels> need to wrap around the <input> so that the words can be clicked and still check the button-->
+
+    <label>
+        <input type="radio" name="cities" value="houston">
+        Houston
+    </label>
+    <label>
+        <input type="radio" name="cities" value="dallas">
+        Dallas
+    </label>
+    <label>
+        <input type="radio" name="cities" value="austin">
+        Austin
+    </label>
+    <label>
+        <input type="radio" name="cities" value="san antonio">
+        San Antonio
+    </label>
+
+    <input type="submit">
+
+    <h1>Selects</h1>
+
+    <label for="States">Select your State:</label>
+    <select id="States" name="States">
+        <option value="TX">Texas</option>
+        <option value="CA">California</option>
+        <option value="NY">New York</option>
+        <!--we define values so that we can use it later on the server end-->
+        <!-- you can add the attribute "multiple" but change the "name" to ___[] to make it a list/array -->
+    </select>
+    <input type="submit">
+
+</form>
+
+</body>
+</html>
