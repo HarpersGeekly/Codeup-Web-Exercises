@@ -1,0 +1,161 @@
+
+#Me {
+    font-family: Georgia; serif;
+    font-size: 30px;
+    color: black;
+}
+
+#navbar, #myNavbar {
+    background: url("../images/brickwall.png");
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    height: 97px;
+}
+#navbar-nav {
+    font-size: 16px;
+
+
+}
+#navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
+#LinktoAbout {
+    position: relative;
+    top: 97px;
+
+}
+
+#imgcircle {
+    margin-top: 75px;
+    box-shadow: 0 5px 5px 0 black, 0 5px 15px 0 rgba(0, 0, 0, .5);
+}
+
+#About {
+
+    /*background: url("images/green_dust_scratch.png");*/
+    background: url("../images/tweed.png");
+    height: 800px;
+    text-align: center;
+    margin-top: 65px;
+}
+
+
+#Hello {
+      font-family: Georgia;
+      color: white;
+  }
+
+#Resume {
+    background: url("../images/white_wall_hash.png");
+    /*background-color: #69A9A9;*/
+    /*#F0F8FF;*/
+    /*auto;*/
+
+}
+#ResumeTitle {
+    font-size: 50px;
+    text-align: center;
+}
+
+#Portfolio {
+    /*background: url("")*/
+    background-color: #69A9A9;
+    /*#F0F8FF;*/
+            /*auto;*/
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+#PortfolioTitle {
+    font-size: 50px;
+    text-align: center;
+}
+
+#Projects, #P1, #P2, #P3, #P4, #P5, #P6 {
+    padding: 20px;
+    font-size: 24px;
+ }
+
+#img-responsive{
+
+    background: #1abc9c;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#img-responsive:hover{
+    opacity:0.5;
+}
+
+#Contact {
+    background-image: url("http://hdwallpaperfx.com/wp-content/uploads/2016/09/Sunset-Highway-Lights-Wallpaper.jpg");
+    background-size: cover;
+            /*720px;*/
+    text-align: center;
+
+    /*images/green_dust_scratch.png*/
+}
+#ContactTitle {
+    font-size: 50px;
+    margin-top: 72px;
+    padding-bottom: 40px;
+
+}
+input[type=text] {
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 10px;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-family: 'Merienda';
+    /*text-align: center;*/
+    background: url("../images/paper_fibers.png");
+
+}
+
+textarea {
+    /* To properly align multiline text fields with their labels */
+    /*vertical-align: top;*/
+
+    /* To give enough room to type some text */
+    height: 250px;
+    width: 300px;
+    font-size: 24px;
+    font-family: 'Merienda';
+    border-radius: 5px;
+    background: url("../images/paper_fibers.png");
+
+
+    /* To allow users to resize any textarea vertically
+    It does not work on all browsers */
+    /*resize: vertical;*/
+}
+#Submit {
+
+    display: inline-block;
+    color: black;
+    background-color: cornflowerblue; /* Green */
+    border: 1px solid darkslategrey;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 5px;
+    font-family: "Georgia";
+    font-size: 20px;
+    cursor: pointer;
+}
+#SML {
+    color: white;
+}

@@ -1,0 +1,164 @@
+body {
+    background: url('http://cdn.collider.com/wp-content/uploads/2015/06/the-martian-movie-image.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*hr {*/
+    /*border: 0; height: 1px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);*/
+/*}*/
+
+
+#wrapper {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+#Heading {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Audiowide;
+    font-size: 70px;
+    color: white;
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+
+}
+#Quote {
+    font-family: Playfair Display;
+    font-size: 35px;
+    color: White;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 25px;
+    text-shadow: 2px 2px black;
+}
+
+
+#Portrait {
+    text-align: center;
+    margin-top: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 50%;
+    box-shadow: 0 5px 5px 0 black, 0 5px 15px 0 rgba(0, 0, 0, .5);
+
+
+}
+#SetPhoto2 {
+    text-align: center;
+    display: block;
+    width: 50%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    box-shadow: 0 5px 5px 0 black, 0 5px 15px 0 rgba(0, 0, 0, .8);
+}
+#EarlyLife, #NotableWorks {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-family: Audiowide;
+    font-size: 45px;
+    color: #b22222;
+    text-shadow: 2px 2px black;
+    text-align: center;
+
+}
+
+#Timeline {
+    font-size: 20px;
+    color: black;
+}
+
+li {
+    text-align: center;
+    font-family: Times New Roman;
+    list-style-type: none;
+}
+
+#blockquote {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Times New Roman;
+    font-size: 22px;
+    margin-left: 20px;
+    text-align: left;
+}
+#FilmCareer {
+    margin: 30px;
+    font-family: Times New Roman;
+    font-size: 22px;
+    text-align: left;
+
+}
+#MovieList {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    alignment: center;
+}
+#LastQuote {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin: auto;
+    font-size: 25px;
+    font-family: Times New Roman;
+}
+#Section2 {
+    background-color: rgba(221, 221, 221, 0.6);
+    margin-top: 20px;
+}
+
+#AlienSet {
+    display: block;
+    width: 35%;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    box-shadow: 0 5px 5px 0 black, 0 5px 15px 0 rgba(0, 0, 0, .8);
+
+}
+
+#infofooter{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+    text-align: center;
+}
+
+#IMDB {
+    background-color: #f3ce13;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 0px solid #000;
+    box-shadow: 2px 2px #000000
+}
+
+#Wiki {
+    background-color: #f5f5f5;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 0px solid #000;
+    box-shadow: 2px 2px #000000
+}
+#Twitter {
+    background-color: #00aced;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 0px solid #000;
+    box-shadow: 2px 2px #000000
+}
