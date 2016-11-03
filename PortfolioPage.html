@@ -3,19 +3,15 @@
 <head>
     <title>Bootstrap Portfolio</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/Portfolio.css">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
-
 
 <body>
 
-
-
-<nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+<nav class="navbar navbar-default navbar-fixed-top" id="thenavbar">
 
     <div class="container">
         <div class="navbar-header">
@@ -25,15 +21,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <h3 id="Me">Ryan Harper</h3>
-        </div>
-        <div class="collapse navbar-collapse " id="myNavbar">
-            <ul class="nav navbar-nav navbar-right" style="border: solid" id="navbar-nav">
-                <li><a href="#LinktoAbout">About</a></li>
-                <li><a href="#LinktoResume">Resume</a></li>
-                <li><a href="#LinktoPortfolio">Portfolio</a></li>
-                <li><a href="#LinktoContact">Contact</a></li>
 
+            <h3 id="myname">Ryan Harper</h3>
+
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right" style="border: solid" id="thenavbarwords">
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#resume-section">Resume</a></li>
+                <li><a href="#portfolio-section">Portfolio</a></li>
+                <li><a href="#contact-section">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -41,96 +38,83 @@
 </nav>
 
 
-<a id="LinktoAbout"></a>
+<a id="about-section"></a>
 
 <div class="container-fluid .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0" id="About">
     <img class="img-circle .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0" src="http://i64.tinypic.com/8vy9md.jpg" width="350" height="450" id="imgcircle">
-    <h3 id="Hello">Hello and welcome! My name is Ryan Harper. I study Web Development at Codeup in San Antonio, TX.
-    Software is a career change for me from a background in advertising sales and retail management. I couldn't be more pleased
-        with the experience.</h3>
+    <h3 id="Hello">Hello, I am Ryan Harper. I study Full Stack Web Development at Codeup Bootcamp in San Antonio, Texas.
+    Software is a career change from a background in advertising sales and retail management. I couldn't be more happy
+        about my new adventure.</h3><p id="myemail">210.602.3618  |  HarperRyanC@gmail.com</p>
 
 </div>
 
-<a id="LinktoResume"></a>
+<a id="resume-section"></a>
 
 <div class="container-fluid .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0" id="Resume">
-    <h3 id="ResumeTitle">Resume</h3>
-        <p>The standard Lorem Ipsum passage, used since the 1500s
-
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-            Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-
-            1914 translation by H. Rackham
-
-            "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
-
-            Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
-
-            1914 translation by H. Rackham
-
-            "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</p>
+    <h3 id="ResumeTitle">Coming Soon!</h3>
 </div>
 
+<a id="portfolio-section"></a>
 
-<a id="LinktoPortfolio"></a>
-
-<div class="container-fluid .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0" id="Portfolio" >
+<div class="container-fluid .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0" id="Portfolio">
     <h3 id="PortfolioTitle">Portfolio</h3>
 
     <div class="row" id="Projects">
         <div class="col-xs-6 col-md-4" id="P1">
             <p style="font-size: 24px">Project Placeholder</p>
-            <a href="http://codepen.io/HarpersGeekly/full/BzvOwj/"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
+            <a href="http://localhost:63342/Codeup-web-exercises/TributePage.html?_ijt=alto2evts8754bi7jg8fie15t1"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
         </div>
 
         <div class="col-xs-6 col-md-4" id="P2">
             <p style="font-size: 24px">Project Placeholder</p>
-            <a href="http://codepen.io/HarpersGeekly/full/BzvOwj/"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
+            <a href="http://localhost:63342/Codeup-web-exercises/TributePage.html?_ijt=alto2evts8754bi7jg8fie15t1"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
         </div>
 
         <div class="col-xs-6 col-md-4" id="P3">
             <p style="font-size: 24px">Project Placeholder</p>
-            <a href="http://codepen.io/HarpersGeekly/full/BzvOwj/"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
+            <a href="http://localhost:63342/Codeup-web-exercises/TributePage.html?_ijt=alto2evts8754bi7jg8fie15t1"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
         </div>
         <div class="col-xs-6 col-md-4" id="P4">
             <p style="font-size: 24px">Project Placeholder</p>
-            <a href="http://codepen.io/HarpersGeekly/full/BzvOwj/"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
+            <a href="http://localhost:63342/Codeup-web-exercises/Coffee%20Bean%20Order%20Form.html?_ijt=alto2evts8754bi7jg8fie15t1"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
         </div>
         <div class="col-xs-6 col-md-4" id="P5">
             <p style="font-size: 24px">Project Placeholder</p>
-            <a href="http://codepen.io/HarpersGeekly/full/BzvOwj/"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
+            <a href="http://localhost:63342/Codeup-web-exercises/Coffee%20Bean%20Order%20Form.html?_ijt=alto2evts8754bi7jg8fie15t1"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
         </div>
         <div class="col-xs-6 col-md-4" id="P6">
             <p style="font-size: 24px">Project Placeholder</p>
-            <a href="http://codepen.io/HarpersGeekly/full/BzvOwj/"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
+            <a href="http://localhost:63342/Codeup-web-exercises/Coffee%20Bean%20Order%20Form.html?_ijt=alto2evts8754bi7jg8fie15t1"target="_blank"><img class="img-responsive" id="img-responsive" style="display:inline" src="https://www.whistler.com/images/placeholders/200x200.gif"></img></a>
         </div>
     </div>
 </div>
 <!--http://webthumb.bluga.net/download.php?id=wt57d1e4e17a721&size=medium2&ext=jpg-->
 
 
-<a id="LinktoContact"></a>
+<a id="contact-section"></a>
 
 <div  class="container-fluid .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0 col-md-12" id="Contact">
-    <h3 id="ContactTitle">Contact Me</h3>
+
+        <h3 id="ContactTitle">Contact Me</h3>
 
     <div class="container .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0">
         <div class="row">
-            <div class="col-sm-6 col-md-4" id="SocialMediaLink">
-                <h1 id="SML">PLACEHOLDER SOCIAL MEDIA LINK</h1>
+            <div class="col-sm-6 col-md-4">
+                <a href="https://www.linkedin.com/" target="_blank"  id="social-media-link">
+                    <i class="fa fa-linkedin-square"></i>
+                </a>
 
             </div>
-            <div class="col-sm-6 col-md-4" id="SocialMediaLink">
-                <h1 id="SML">PLACEHOLDER SOCIAL MEDIA LINK</h1>
+            <div class="col-sm-6 col-md-4">
+                <a href="https://github.com/HarpersGeekly" target="_blank" id="social-media-link">
+                    <i class="fa">&#xf09b;</i>
+                </a>
 
             </div>
-            <div class="col-sm-6 col-md-4" id="SocialMediaLink">
-                <h1 id="SML">PLACEHOLDER SOCIAL MEDIA LINK</h1>
+            <div class="col-sm-6 col-md-4">
+                <a href="http://www.piedpiper.com/" target="_blank" id="social-media-link">
+                    <i class="fa fa-pied-piper" ></i>
+                </a>
 
             </div>
         </div>
@@ -147,7 +131,7 @@
         </div>
         <div>
             <label for="msg"></label>
-            <textarea id="msg" name="user_message"></textarea>
+            <textarea id="msg" name="user_message" placeholder="Message"></textarea>
 
         </div>
 
@@ -159,6 +143,11 @@
 
 </div>
 
+<script
+        src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
 
