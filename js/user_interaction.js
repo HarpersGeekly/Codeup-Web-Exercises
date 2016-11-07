@@ -12,9 +12,10 @@
 var userName = prompt("What's your name?");
 alert("Hello, " + userName);
 
-var userPizza = prompt("Do you like pizza?");
+var userPizza = confirm("Do you like pizza?");
 if (userPizza) {
     alert("I like pizza too!")
 } else {
     alert("Well, aren't you weird...")
+
 };
