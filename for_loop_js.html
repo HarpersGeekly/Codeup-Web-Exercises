@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For Loops Exercises</title>
+</head>
+<body>
+<script>
+
+/* Write the JS code to log to the console the multiplication table for a random number between 1 and 10.
+For instance, if the random number is 7, the console output should look like:
+
+ 7x1=7
+ 7x2=14
+ 7x3=21
+ 7x4=28
+ 7x5=35
+ 7x6=42
+ 7x7=49
+ 7x8=56
+ 7x9=63
+ 7x10=70
+ */
+
+var startNumber = Math.floor(Math.random() * 10) + 1;
+for (var i = 1; i <= 10; i += 1) {
+     var result = startNumber * i;
+     console.log(startNumber + ' times ' + i + ' is ' + result);
+ }
+
+
+    /* Using a for loop and the code to generate a random number from the previous lessons,
+     generate 10 random numbers between 20 and 200 and output to the console whether each number
+    is odd or even. For example: */
+
+
+    for (i = 0; i <= 9; i+= 1) {
+        var random = Math.floor(Math.random() * 180) + 20;
+        if (random % 2 == 0) {
+            console.log(random + ' is even.');
+        } else {
+            console.log(random + ' is odd.');
+        }
+    };
+
+
+
+// Count from 100 down to 5 by 5.//
+
+    for (var i = 100; i >= 5; i -= 5) {
+        console.log(i);
+    }
+
+</script>
+
+
+
+
+</body>
+</html>

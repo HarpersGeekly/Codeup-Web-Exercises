@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Breaks and Continue Exercises</title>
+</head>
+<body>
+
+<script>
+
+
+//    Please follow the instructions below.
+//
+//    Create a new HTML file name break_continue_js.
+//
+//    Use Math.floor((Math.random()*50)+1) to generate a random number between 1 and 50. If the number is even, keep getting a new random number till it is odd.
+//
+//    Use console.log to log all the odd numbers from 1 to 50, except the random odd number you generated, by using break and continue, but you
+//  don't need to use both. Try to match the output shown below (your random number will be different).
+//    Finally, save your work, commit the changes to your git repository, and push to GitHub.
+//            Your output should look like this:
+//
+//    Random odd number to skip is: 27
+//    Here is an odd number: 1
+//    Here is an odd number: 3
+//    Here is an odd number: 5
+//    Here is an odd number: 7
+//    Here is an odd number: 9
+//    Here is an odd number: 11
+//    Here is an odd number: 13
+//    Here is an odd number: 15
+//    Here is an odd number: 17
+//    Here is an odd number: 19
+//    Here is an odd number: 21
+//    Here is an odd number: 23
+//    Here is an odd number: 25
+//    Yikes! Skipping number: 27
+//    Here is an odd number: 29
+//    Here is an odd number: 31
+//    Here is an odd number: 33
+//    Here is an odd number: 35
+//    Here is an odd number: 37
+//    Here is an odd number: 39
+//    Here is an odd number: 41
+//    Here is an odd number: 43
+//    Here is an odd number: 45
+//    Here is an odd number: 47
+//    Here is an odd number: 49
+
+var randomNumber = Math.floor((Math.random()*50)+1); // random number between 1 to 50. //
+
+console.log("Random odd number to skip is: " + randomNumber);
+
+for (var oddNumber = 1; /* as long as */ oddNumber < 50; /* count up from 1 */ oddNumber += 1) {
+
+    if (oddNumber % 2 == 0) { // if the random number is even //
+        continue;
+    }
+
+    if (randomNumber == oddNumber) {
+        console.log("Yikes! Skipping number: " + randomNumber);
+    } else {
+        console.log("Here is an odd number: " + oddNumber)
+    }
+
+
+};
+
+</script>
+
+</body>
+</html>
