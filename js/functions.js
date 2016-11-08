@@ -78,3 +78,4 @@ console.log(weather);
 
 var response = prompt("What's your age?");
 console.log("Your age is:" + response);
+
