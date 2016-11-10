@@ -104,6 +104,7 @@ console.log(multiply(2, 4));
 
 
 
+
 var userOperation = prompt("Which operation would you like to perform? +, -, /, or * ?");
 var userInput1 = parseInt(prompt("Give me a number."));
 var userInput2 = parseInt(prompt("Pick a second number."));
@@ -127,19 +128,43 @@ var operations = function(userInput1, userInput2) {
 };
 console.log(operations(userInput1, userInput2));
 
-//^ Try 'switch'!
+// Try using switch below!
 
 //
-// function askfornumbers() {
-//     firstnum = parseint(prompt('give me a number'));
-//     secondnum = parseint(prompt('give me a number'));
+// function askforNumbers() {
+//     firstNumber = parseint(prompt('give me a number'));
+//     secondNumber = parseint(prompt('give me a number'));
+//     if (firstNumber == NaN || secondNumber == NaN) {
+//         alert("Invalid Input");
+//         return false;
+//     }
 // }
-// var oper = prompt("choose sum, add, div, multi");
 //
-// switch(oper){
+// var oper = prompt("choose sum, subtract, divide, multiply");
+//
+// switch(oper) {
 //     case "sum":
-//         askfornumbers();
-//         res = add(firstnum, secondnum);
+//         askforNumbers();
+//         result = add(firstNumber, secondNumber);
 //         break;
-// }repeat
-
+//     case "subtract":
+//         askforNumbers();
+//         result = subtract(firstNumber, secondNumber);
+//         break;
+//     case "divide":
+//         askforNumbers();
+//         result = divide(firstNumber, secondNumber);
+//         break;
+//     case "mulitply":
+//         askforNumbers();
+//         result = multiply(firstNumber, secondNumber);
+//         break;
+//     default:
+//         alert("Invalid function name");
+//
+// }
+// console.log("firstNumber: "+ firstNumber +" secondNumber: "+ secondNumber +" res: "+ res);
+//
+//
+//
+//
