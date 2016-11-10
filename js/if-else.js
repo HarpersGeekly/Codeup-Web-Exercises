@@ -1,6 +1,7 @@
 'use strict'
 
-/* Knowing that a student's grades are 70, 80, 95. Write a Javascript program, using conditionals that logs to the console "You're awesome" if the average of her grades is greater than 80, otherwise the message should be "You need to practice more". */
+/* Knowing that a student's grades are 70, 80, 95. Write a Javascript program, using conditionals that logs to the console
+ "You're awesome" if the average of her grades is greater than 80, otherwise the message should be "You need to practice more". */
 
 var average = ((70+80+95)/3);
 
@@ -28,13 +29,18 @@ if (average > 80) {
 }
 
 
-/* HEB has an offer for the clients that buy products amounting more than $200. Write a JS program, using conditionals, that logs to the browser, how much does Ryan, Cameron and George need to pay. We know that Cameron bought $180, Ryan $250 and George $320. Your program will have to display a line with the name of the person, the amount before the discount, if any, and the amount after the discount.*/
+/* HEB has an offer for the clients that buy products amounting more than $200. Write a JS program, using conditionals,
+that logs to the browser, how much Ryan, Cameron, and George need to pay.
+ We know that Cameron bought $180, Ryan $250 and George $320.
+ Your program will have to display a line with the name of the person, the amount before the discount, if any,
+ and the amount after the discount.*/
 
 /* What if we didn't know the amounts yet? Would it be var customerPays = [0, 300]; Random amounts between 0 and 300??
 If (customerPays > 200) ... right?
  */
 
-/* Nevermind. In this case we would know because at the checkout they're going total an amount. Then the code executes at th checkout counter for a coupon. */
+/* Nevermind. In this case we would know because at the checkout they're going total an amount.
+Then the code executes at the checkout counter for a coupon. */
 
 var cameron = 180;
 var ryan = 250;
@@ -67,11 +73,15 @@ if (total > 200) { // if $320 is over 200, which it is...
 console.log('The total is' + total);
 
 
-/* Suppose your friend Isaac cannot decide between two options. He doesn't know if he should buy a car or a new house. Help him decide! Write a small JS program. The following line generates either a 0 or a 1 randomly.*/
+/* Suppose your friend Isaac cannot decide between two options.
+He doesn't know if he should buy a car or a new house.
+Help him decide! Write a small JS program.
+The following line generates either a 0 or a 1 randomly. var flipACoin = Math.floor(Math.random()* 2)
+*/
 
-/* var flipACoin = Math.floor(Math.random()* 2) */
 
-/* Add an if statement to log a "Buy a car" to the console if the result is 0 and "Buy a house" if the result is 1. Could this program be written using a ternary operator? */
+/* Add an if statement to log a "Buy a car" to the console if the result is 0 and "Buy a house" if the result is 1.
+ Could this program be written using a ternary operator? */
 
 var flipACoin = Math.floor(Math.random()* 2);
 
@@ -80,10 +90,6 @@ var flipACoin = Math.floor(Math.random()* 2);
     } else {
         console.log("you should buy a car");
     }
-
-
-
-
 
 
 
