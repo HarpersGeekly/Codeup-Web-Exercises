@@ -30,18 +30,18 @@
         var circle = {
             radius: 3,
             getArea: function () {
-                return (Math.PI * (Math.pow(circle.radius,2)));
+                var area = (Math.PI * (Math.pow(this.radius,2)));
+                return area;
             },
-
             logInfo: function (roundYourArea) {
 // If roundYourArea is true, round the result to the nearest integer.
-                var area;
+                var round;
                 if (roundYourArea == true) { // if you want to round your variable, then do the function to round.
-                    area = (Math.round(circle.getArea()))
+                    round = (Math.round(this.getArea()))
                 } else {
-                    area = (circle.getArea()); // otherwise just spit out the area that you got from getArea function.
+                    round = (this.getArea()); // otherwise just spit out the area that you got from getArea function.
                 }
-                console.log("Area of a circle with radius: " + this.radius + ", is: " + area);
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + round);
 
             }
         };
