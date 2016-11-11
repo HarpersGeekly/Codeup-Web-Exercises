@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math_JS</title>
+</head>
+<body>
+<script>
+
+
+    "use strict";
+//
+//    // create a circle object
+//    var circle = {
+//        radius: 3,
+//        getArea: function() {
+//            var area = (Math.PI * circle.radius(Math.pow(2, 1)));
+//        return area}
+//    };
+//    console.log(getArea);
+
+    (function() {
+        "use strict";
+
+        // create a circle object:
+
+        var circle = {
+            radius: 3,
+            getArea: function () {
+                return (Math.PI * (Math.pow(circle.radius,2)));
+            },
+
+            logInfo: function (roundYourArea) {
+// If roundYourArea is true, round the result to the nearest integer.
+                var area;
+                if (roundYourArea == true) { // if you want to round your variable, then do the function to round.
+                    area = (Math.round(circle.getArea()))
+                } else {
+                    area = (circle.getArea()); // otherwise just spit out the area that you got from getArea function.
+                }
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + area);
+
+            }
+        };
+        // log info about the circle:
+
+        console.log("Raw circle information");
+        circle.logInfo(false);
+        console.log("Circle information rounded to the nearest whole number");
+        circle.logInfo(true);
+
+        console.log("=======================================================");
+
+        // TODO: Change the radius of the circle to 5.
+
+        circle.radius = 5;
+
+        console.log("Raw circle information");
+        circle.logInfo(false);
+        console.log("Circle information rounded to the nearest whole number");
+        circle.logInfo(true);
+
+    })();
+
+</script>
+</body>
+</html>
+
+<!--console.log("The circle radius is now: " + circle.radius + " and the new area is now: " + circle.getArea(5) + " and rounded: " + circle.logInfo() );-->
