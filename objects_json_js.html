@@ -12,7 +12,7 @@
 // Create an array of objects that represent books.
 // Each book should have a title and an author.
 // The book author should be an object with a firstName and lastName.
-var books = [  // this array has 5 objects. each one has a title and author.
+var books = [  // this array is a collection of 5 objects. each one has a title and author.
 // you can add objects into an object using them as properties, in this case firstname and lastname are properties of author.
 // the green string is the value of an object.
 
@@ -35,7 +35,7 @@ var books = [  // this array has 5 objects. each one has a title and author.
                 lastName: "Veblen"
                 }
     },
-    {       title: "Theory of the Business Enterprise",
+    {       title: "Theory of Business Enterprise",
             author: {
                 firstName: "Thorstein",
                 lastName: "Veblen"
@@ -54,19 +54,48 @@ console.log(books);
 
 // todo:
 // Loop through the array of books using .forEach and print out the specified information about each one.
-// start loop here
+// start loop here:
+
 
 books.forEach(function (book, index) {
     console.log("Book #" + (index+1));
-    console.log("Title: " + books[index].title);
-    console.log("Author: " + books[index].author.firstName + " " + books[index].author.lastName);
+    console.log("Title: " + book.title);
+    console.log("Author: " + book.author.firstName + " " + book.author.lastName);
     console.log("---");
+
 });
-
-
-
 
 // end loop here
 </script>
 </body>
 </html>
+
+<!--//Here's a good approach to this.-->
+<!--//grab just the first element-->
+
+<!--//var book = books[0];-->
+
+<!--I can even make things simple with variables. -->
+
+<!--var fullName = book.author.firstName + " " + book.author.lastName;-->
+<!--var message = "Title is " + book.title + " written by " + fullName;-->
+<!--console.log(message);-->
+
+
+<!--//forget the loop for a moment...let's just go through it simply:-->
+
+<!--// console.log("Title is " + book.title + " written by " + book.author.firstName + " " + book.author.lastName);-->
+
+<!--// book = books[1];-->
+<!--//console.log("Title is " + book.title + " written by " + book.author.firstName + " " + book.author.lastName);-->
+
+<!--// book = books[2];-->
+<!--//console.log("Title is " + book.title + " written by " + book.author.firstName + " " + book.author.lastName);-->
+
+<!--// book = books[3];-->
+<!--//console.log("Title is " + book.title + " written by " + book.author.firstName + " " + book.author.lastName);-->
+
+<!--// book = books[4];-->
+<!--//console.log("Title is " + book.title + " written by " + book.author.firstName + " " + book.author.lastName);-->
+
+<!--//that's some smelly code...let's LOOP THIS CODE:-->
