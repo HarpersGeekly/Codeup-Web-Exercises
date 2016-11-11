@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cake Timer</title>
+</head>
+<body>
+<script>
+
+
+    (function() {
+
+        var count = 0;
+        var interval = 1000;
+        var max = 10;
+
+        var condition = function () {
+            if (max <= 0) {
+                console.log("Cake is ready!");
+                clearInterval(bakeInt);
+            } else {
+                console.log("Hold on " + max + " more seconds ");
+                max--;
+
+            }
+        };
+
+
+        //create the interval with a function
+        var bakeInt = setInterval(condition, interval);
+
+        // setTimeout example - a countdown
+
+        var delay = interval * max; // (10000) delay is just a variable we created but it seems reasonable because we wait
+
+        var timeoutId = setTimeout(function() {
+            alert("Time is up! I will redirect");
+            console.log("Time is up!");
+//            window.location = "https://www.google.com/search?q=cakes&biw=1440&bih=418&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjyqcXG4aHQAhUU7GMKHRntAQIQ_AUIBigB";
+        }, delay);
+
+    })();
+
+</script>
+</body>
+</html>
