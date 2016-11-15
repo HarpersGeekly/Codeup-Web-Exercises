@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Events</title>
+</head>
+<body>
+
+<button id="btn1" class="event-btns">Click Me!</button>
+<button id="btn2" class="event-btns">Click Me Also!</button>
+
+<script>
+    (function() {
+    'use strict';
+
+    // create a handler function
+    var listener = function (event) {
+        alert('You clicked the button!');
+    };
+
+// register the listener to handle clicks on btn1:
+
+    var btn = document.getElementById('btn1');
+    //    btn.addEventListener('click', listener);
+
+    //NOW I ADDED ANOTHER BUTTON SO HAD TO CHANGE  //
+
+    var btns = document.getElementsByClassName("event-btns");
+
+    btns[0].addEventListener('click', listener);
+    btns[1].addEventListener('click', function (event) {
+        alert("You clicked on this other button!");
+    });
+
+
+    })();
+</script>
+</body>
+</html>
+
