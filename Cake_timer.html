@@ -6,9 +6,8 @@
 </head>
 <body>
 <script>
-
-
     (function() {
+
 
         var count = 0;
         var interval = 1000;
@@ -16,9 +15,11 @@
 
         var condition = function () {
             if (max <= 0) {
+                document.write("Cake is ready!");
                 console.log("Cake is ready!");
                 clearInterval(bakeInt);
             } else {
+                document.write("Hold on " + max + " more seconds " + "<br>");
                 console.log("Hold on " + max + " more seconds ");
                 max--;
 
@@ -34,10 +35,15 @@
         var delay = interval * max; // (10000) delay is just a variable we created but it seems reasonable because we wait
 
         var timeoutId = setTimeout(function() {
-            alert("Time is up! I will redirect");
+            alert("Time is up!");
+            document.write("Time is up!" + "<br>" );
             console.log("Time is up!");
+
 //            window.location = "https://www.google.com/search?q=cakes&biw=1440&bih=418&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjyqcXG4aHQAhUU7GMKHRntAQIQ_AUIBigB";
         }, delay);
+
+
+
 
     })();
 

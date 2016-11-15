@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Defuse the BOM</title>
+</head>
+<body>
+
+
+<button id="detonator">Start The Detonation...</button>
+<h2 id="message">This BOM will self destruct in <span id="timer">10</span> seconds...</h2>
+<button id="defuser">Defuse the BOM</button>
+
+
+<script>
+(function() {
+    "use strict";
+
+detonator.onclick = function() {
+
+    var counter = 10;
+    var interval = 1000; /* one second */
+    //create the interval with a function:
+    var bombInterval = setInterval(startTimer, interval); // what is setInterval? It's a built in JS function.
+
+    function startTimer() {
+
+        if (counter == 0) {
+            alert('KABOOOM!');
+            document.body.innerHTML = '';
+            clearInterval(bombInterval);
+
+        } else if (counter > 0) {
+            document.getElementById('timer').innerHTML = counter;
+            counter--;
+        }
+    }
+
+    // cancel the interval/timeout for startTimer()
+
+    function defuseTheBOM() {
+        if (confirm('You defused the bom!')) {
+            document.getElementById('timer').innerHTML = 10;
+            counter = 10;
+            clearInterval(bombInterval);
+        }
+    }
+
+    var defuser = document.getElementById('defuser');
+    defuser.addEventListener('click', defuseTheBOM);
+
+    var detonator = document.getElementById('detonator');
+    detonator.addEventListener('click', startTimer);
+
+};
+})();
+</script>
+</body>
+</html>
+
+<!--<button id="detonator">Start The Detonation...</button>-->
+<!--<button id="defuser">Defuse the BOM</button>-->
+
+<!--var detonator = document.getElementById('detonator');-->
+<!--detonator.addEventListener('click', countdownTimer);-->
+
+<!--var defuser = document.getElementById('defuser');-->
+<!--defuser.addEventListener('click', defuseTheBOM);-->

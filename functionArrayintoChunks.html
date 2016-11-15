@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function That Splits An Array into Chunks</title>
+</head>
+<body>
+
+<script>'use strict';
+
+(function() {
+
+// write a function `chunk` that splits an array into chunks
+// of 3
+// ex
+// > chunk([1,2,3,4,5,6,7])
+//   [[1,2,3], [4,5,6], [7]]
+// modify the function to take in a parameter for chunk size
+
+// ---- =====================================================
+
+var array = [1,2,3,4,5,6,7];
+
+    var chunk = function(array, chunkSize) {                //will split up an array into smaller chunks
+
+        var chunks = [];                                    //chunks is going to be an array.
+        for (var i = 0; i < array.length; i += chunkSize) { //for the whole array, increment by how many indexes (chunksize) you want.
+            chunks.push(array.slice(i, i + chunkSize));     // when you count through the indexes, take those new chunks, and add(push) them to the end.
+        }
+        return chunks;
+    };
+console.log(chunk(array, 3));               //call the chunk function and manipulate the original array by calling that array and slicing them into 3 chunksizes.
+
+})();
+
+
+//=================================================================================
+(function() {
+
+    //give me the unique values in an array as keys in an object
+    //and their frequencies as the objects's values
+
+    function uniqWithCount(array) {
+        var counts = {};
+        array.forEach(function(item) {
+           counts[item] = 0;
+        });
+
+        array.forEach(function(item) {
+            counts[item] += 1;
+
+        });
+
+        return counts;
+
+    }
+
+    console.log(uniqWithCount([1,2,3,2,4,4,4,1]));
+
+    // {1: 2, 2: 2, 3: 1, 4: 3}
+
+
+
+
+
+
+})();
+
+</script>
+</body>
+</html>
