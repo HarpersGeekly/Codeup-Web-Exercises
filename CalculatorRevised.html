@@ -138,7 +138,7 @@
     (function() {
         'use strict';
 
-        //================== Main Variable Assignments ======================================================
+//================================== Main Variable Assignments =========================================================
 
         var firstInput = document.getElementById('left-operand');
         var operator = document.getElementById('operator');
@@ -151,18 +151,18 @@
         var maxLength = 12;
         var decimalPressOnce = false;
 
-        // ============= Enable the Number & Operator Buttons to Click, Input, and Limit the input length ====
+//=============== Enable the Number, Operator, and Decimal to Click, Input, and Limit the input length =================
 
         var enableInputs = function () {
             if (this.className == 'number' && operator.value == '') {
                 if (firstInput.value.length >= maxLength) {
                         return;
                 }
-                if (this.id == 'btnDecimal') {  // If what I'm clicking is a button with an id 'btnDecimal' and if the variable
+                if (this.id == 'btnDecimal') {
                     if (decimalPressOnce == false) {
                         decimalPressOnce = true;
                     } else {
-                        return;  //it's not going to do anything if I keep pressing
+                        return;
                     }
                 }
                 firstInput.value += this.innerHTML;
@@ -172,6 +172,13 @@
                 if (secondInput.value.length >= maxLength) {
                     return;
                 }
+                if (this.id == 'btnDecimal') {
+                    if (decimalPressOnce == true && firstInput.value != '') {
+                        decimalPressOnce = false;
+                    } else {
+                        return;
+                    }
+                }
                 secondInput.value += this.innerHTML;
             }
         };
@@ -179,20 +186,20 @@
         for (var i = 0; i < inputButtons.length; i++) {
             inputButtons[i].addEventListener('click', enableInputs);
         }
-        //============================== The Clear Button =================================================
+//============================================ The Clear Button ========================================================
 
         var clear = function () {
             firstInput.value = '';
             operator.value = '';
             secondInput.value = '';
             answerField.value = '';
-            decimalPressOnce = false; // resets back to default.
+            decimalPressOnce = false;// resets back to default.
 
         };
         btnClear.addEventListener('click', clear);
 
 
-        // ================================ The Math Calculations ========================================
+//========================================= The Math Calculations ======================================================
 
 
         var calculate = function () {
@@ -202,7 +209,8 @@
                 operator.value = 'Dave.';
                 secondInput.value = 'I\'m afraid';
                 answerField.value = 'I can\'t do that.';
-                document.body.style.backgroundImage = "url('https://66.media.tumblr.com/tumblr_m6i8gcyLgb1qcwoano1_500.gif')";
+                document.body.style.backgroundImage =
+                        "url('https://66.media.tumblr.com/tumblr_m6i8gcyLgb1qcwoano1_500.gif')";
                 setTimeout(function () { location.reload(true); }, 2500);
 
             } else {
@@ -237,7 +245,8 @@
                             operator.value = 'YOU BROKE';
                             secondInput.value = 'THE INTERNET';
                             answerField.value = '...and spacetime.';
-                            document.body.style.backgroundImage = "url('https://66.media.tumblr.com/414c6d09204aba6b054341b45b68758d/tumblr_n381ofewGD1qghl49o1_r1_500.gif')";
+                            document.body.style.backgroundImage =
+          "url('https://66.media.tumblr.com/414c6d09204aba6b054341b45b68758d/tumblr_n381ofewGD1qghl49o1_r1_500.gif')";
                             setTimeout(function () { location.reload(true); }, 4000);
                             break;
                         }
@@ -253,18 +262,29 @@
                     }
             };
 
-        // ============================  The Equals Button ================================================
+//===========================================  The Equals Button =======================================================
 
-        btnEquals.addEventListener('click', calculate);
+        btnEquals.addEventListener('click', calculate); // uses the above function when equals button is pressed
+
+        var btnEqualsAgain = function () {
+            if (firstInput != '' && secondInput.value == '' && decimalPressOnce == false){
+                decimalPressOnce = true;
+            }
+        };
+        btnEquals.addEventListener('click', btnEqualsAgain); //allows decimals to be used after equals button is used.
 
     })();
 </script>
 </body>
 </html>
 
+
+
+
+
+
+
 <!--https://66.media.tumblr.com/df4352b7810d2cf35004eeadf44d5938/tumblr_mlgg0xlzkv1r2du9bo1_500.gif-->
-
-
 
 <!--//  var lastOperation= '';-->
 <!--// continue to click equals to repeat the last operation-->
