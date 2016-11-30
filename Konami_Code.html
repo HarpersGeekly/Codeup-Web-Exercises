@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1b6d85;
+            background: ;
+        }
+        h1 {
+            font-family: 'VT323', monospace;
+            font-size: 100px;
+            text-align: center;
+            margin-top: 100px;
+            color: white;
+        }
+        p {
+            font-family: 'VT323', monospace;
+            font-size: 50px;
+            text-align: center;
+
+        }
+        .container {
+            text-align: center;
+        }
+        #shia {
+            width: 480px;
+            height: 268px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Konami Code</h1>
+<p>Do you know it? Then...</p>
+<div class="container">
+    <iframe id="shia" src="//giphy.com/embed/3o85xtLX7zCyeeWGLC" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<script src="js/jquery.js"></script>
+<script>
+    "use strict";
+
+    var inputs = [];
+    var konamiCode = "38,38,40,40,37,39,37,39,66,65";
+
+    $(document).keyup(function(event){
+
+        //putting ("pushing") the values of the event keyCode (what users press) into the new array 'inputs'.
+        inputs.push(event.keyCode);
+
+        // this converts the user inputs array into a string and checks if it matches the konamiCode string
+        if(inputs.toString().indexOf(konamiCode) >= 0) {
+
+            // let's have fun
+            document.body.style.backgroundImage =
+                    "url('https://media.giphy.com/media/7H5PxliIVN5i8/giphy.gif')";
+            setTimeout(function () {
+                location.reload(true);
+            }, 4000);
+
+            document.getElementById("shia").src = "https://media.giphy.com/media/13wLPE6bC4xV3G/giphy.gif" width="480" height="268";
+            setTimeout(function () {
+                location.reload(true);
+            }, 4000);
+
+        }
+
+    });
+//    var keys = [];
+//
+//    $(document).keyup(function(event){
+//
+//        var konamiCode = [38,38,40,40,37,39,37,39,66,65];
+//        var i = 0;
+//            if(event.keyCode === konamiCode[i++]) {
+//                alert('Konami Code');
+//            }
+//    });
+
+//    $(document).keyup(function(event){
+//        console.log(event.keyCode);
+//    });
+</script>
+</body>
+</html>

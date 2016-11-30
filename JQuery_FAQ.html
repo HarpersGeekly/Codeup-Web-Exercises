@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery FAQS</title>
+    <style>
+        body {
+            background-color: #397651;
+        }
+
+    .invisible {
+        display:none
+    }
+    #introNational, #introStates {
+        color: white;
+        text-shadow: 4px 4px 4px black;
+    }
+    #national {
+        border: 1px solid black;
+        background-color: #7ec073;
+    }
+    #state {
+        border: 1px solid black;
+        background-color: #7ec073;
+
+    }
+    dt {
+        text-align: left;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    img {
+        border: 3px solid black;
+    }
+    </style>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        "use strict";
+
+        $(document).ready(function() {
+            $('dd').hide();
+            $('#toggle').click(function() {
+                $('dd').fadeToggle(1500);
+            });
+
+            $('ul li:first-child').css('font-weight', 'bold');
+//            $('li').click(function() {
+//                $(this).parent().toggle();
+//            });
+
+//            $('#stateparktoggle').click(function() {
+//                $('ul').children().toggle(this);
+//            });
+
+            $('h3').click(function() {
+                $(this).parent().children('ul').children().slideToggle();
+            })
+        });
+
+
+    </script>
+</head>
+
+<body>
+<div>
+    <h1 id="introNational">A look at some National Parks.</h1>
+</div>
+
+
+<div class="container" id="national">
+    <h3>To see the mysteries of nature click <button id="toggle">HERE:</button></h3>
+<dl>
+    <dt>Niagara:</dt>
+    <dd><img src="http://www.planetware.com/photos-large/CDN/canada-niagara-falls-horseshoe-falls.jpg" width="480px" height="268px"></dd>
+    <dt>Grand Canyon:</dt>
+    <dd><img src="http://images.nationalgeographic.com/wpf/media-live/photos/000/926/overrides/confluence-colorado-river-grand-canyon_92683_600x450.jpg" width="480px" height="268px"></dd>
+    <dt>Yellowstone:</dt>
+    <dd><img src="http://d1njyp8tsu122i.cloudfront.net/wp-content/uploads/yellowstone_perfect_day_old_faithful_680x392.jpg" width="480px" height="268px"></dd>
+    <dt>Carlsbad Caverns:</dt>
+    <dd><img src="http://www.national-park.com/wp-content/uploads/2016/04/Welcome-to-Carlsbad-Caverns-National-Park.jpg" width="480px" height="268px"></dd>
+    <dt>Rocky Mountains:</dt>
+    <dd><img src="http://jtboulder.com/wp-content/uploads/2016/03/IMG_4250_BearLake1_600.jpg" width="480px" height="268px"></dd>
+</dl>
+</div>
+
+<h2 id="introStates">A look at some State Parks of Texas:</h2>
+<div class="container" id="state">
+
+<div>
+    <h3>Big Bend</h3>
+    <ul>
+        <li>fact1</li>
+        <li>fact2</li>
+        <li>fact3</li>
+        <li>fact4</li>
+    </ul>
+</div>
+
+<div>
+    <h3>Davis Mountains</h3>
+    <ul>
+        <li>fact1</li>
+        <li>fact2</li>
+        <li>fact3</li>
+        <li>fact4</li>
+    </ul>
+</div>
+
+<div>
+    <h3>Enchanted Rock</h3>
+    <ul>
+        <li>fact1</li>
+        <li>fact2</li>
+        <li>fact3</li>
+        <li>fact4</li>
+    </ul>
+</div>
+
+
+<!--<button id="stateparktoggle">Click Here to refresh invisible</button>-->
+</div>
+</body>
+</html>
