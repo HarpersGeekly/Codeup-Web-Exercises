@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <Title>Google Maps API REVISED</Title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        #map-canvas {
+            width: 1024px;
+            height: 768px;
+
+        }
+        #firstHeading {
+            color: #1abc9c;
+            text-shadow: 1px 1px black;
+            text-align: center;
+        }
+        #bodyContent {
+            text-align: center;
+            font-size: 16px;
+        }
+        /*#infoWindow {*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<h1></h1>
+
+<div id="map-canvas"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdEhJIIBoaAFGkkOlpPjqJwRLgjQOKOfg"></script>
+<script type="text/javascript">
+
+
+    (function() {
+        "use strict";
+
+        var mapOptions = {
+            zoom: 12,
+            center: {
+                lat: 29.54,
+                lng: -98.49
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map1 = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        var restaurants = [
+            {   name: "Magnolia Pancake Haus",
+                address:"606 Embassy Oaks #100, San Antonio, TX, 78216",
+                linkToWebsite:"",
+                linkToMenu:"",
+                image1:"",
+                image2:""
+
+            },
+
+            {   name: "Alamo Cafe",
+                address:"14250 San Pedro Ave, San Antonio, TX, 78232",
+                linkToWebsite:"",
+                linkToMenu:"",
+                image1:"",
+                image2:""
+            },
+            {   name:"Dough Napoletana Pizzeria",
+                address:"6989 Blanco Rd, San Antonio, TX, 78216",
+                linkToWebsite:"",
+                linkToMenu:"",
+                image1:"",
+                image2:""
+            }
+];
+        var geocoder = new google.maps.Geocoder();
+
+        restaurants.forEach(function (restaurant) {
+            geocoder.geocode({"address": restaurant.address}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                        var marker = new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        animation: google.maps.Animation.DROP,
+                        map: map1
+                   });
+                       var infoWindow = new google.maps.InfoWindow({
+                        content: "<h2>" + restaurant.name + "</h2>" + "<hr>" + "<b>" + restaurant.address + "</b>"
+                       });
+                marker.addListener('click', function() {
+                    infoWindow.open(map1, marker);
+                    }, false);
+
+                } else {
+                    alert("Geocoding was not successful - STATUS: " + status);
+                }
+           });
+        });
+    })();
+</script>
+</body>
+<!--//
