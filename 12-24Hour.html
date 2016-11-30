@@ -13,6 +13,9 @@
 <button id="TwelveHour">Switch to 12 hours</button>
 
 <script>
+'use strict';
+
+    (function(){
 
     // convert back and forth from 24 hour to 12 hour time with 2 functions
     // ex
@@ -20,8 +23,10 @@
     // convertToTwelveHourTime('14:40') // 2:20pm
 
     var userInput = parseInt(document.getElementById('userInputTime').replace(':',''));
-    var hours = ((userInput + 11) % 12 + 1); //    if (hour < 12) hour = hour + 12;
+//  ((userInput + 11) % 12 + 1); //    if (hour < 12) hour = hour + 12;
+    var hours;
     var minutes;
+    var amOrPM;
 
     var TwentyFourHour = document.getElementById('24Hour');
     TwentyFourHour.addEventListener('click', convertToTwentyFourHourTime);
@@ -39,7 +44,7 @@
 
     function convertToTwentyFourHourTime(userInput) {
         // How do you convert?
-
+        // get userinput information
     }
 
     function convertToTwelveHourTime(userInput) {
@@ -49,70 +54,8 @@
     convertToTwentyFourHourTime(userInput);
     convertToTwelveHourTime(userInput);
 
-
-
-
-
-
-
+})();
 </script>
 </body>
 </html>
 
-
-<!--'use strict';-->
-
-<!--(function(){-->
-
-<!--function checkPasswords() {-->
-<!--var passwordsMatch = inputs.password.value == inputs.confirmPassword.value;-->
-<!--if (! passwordsMatch) {-->
-<!--inputs.confirmPassword.parentElement.classList.add('has-error');-->
-<!--inputs.confirmPassword.parentElement.classList.remove('has-success');-->
-<!--} else {-->
-<!--inputs.confirmPassword.parentElement.classList.add('has-success');-->
-<!--inputs.confirmPassword.parentElement.classList.remove('has-error');-->
-<!--}-->
-<!--}-->
-
-<!--var inputs = {-->
-<!--password: document.getElementById('password'),-->
-<!--confirmPassword: document.getElementById('confirm-password')-->
-<!--};-->
-
-<!--// note the event here-->
-<!--inputs.confirmPassword.addEventListener('keyup', checkPasswords);-->
-
-<!--})();-->
-
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title>Document</title>-->
-    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
-<!--</head>-->
-<!--<body>-->
-
-<!--<div class="container">-->
-    <!--<h1>Sign Up For My Site</h1>-->
-
-    <!--<div class="form-group">-->
-        <!--<label for="username">Username</label>-->
-        <!--<input id="username" class="form-control" type="text" value="codeup">-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-        <!--<label for="password">Password</label>-->
-        <!--<input id="password" class="form-control" type="text">-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-        <!--<label for="confirm-password">Confirm Password</label>-->
-        <!--<input id="confirm-password" class="form-control" type="text">-->
-    <!--</div>-->
-
-    <!--<input type="submit" class="btn btn-primary btn-block">-->
-<!--</div>-->
-
-<!--<script src="js/lesson.js"></script>-->
-<!--</body>-->
-<!--</html>-->
