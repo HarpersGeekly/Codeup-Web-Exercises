@@ -18,8 +18,6 @@
         margin-top: 45px;
     }
     input[type=text] {
-        color: white;
-        border-radius: 5px;
         margin: 1px;
         width: 500px;
         padding: 5px 5px;
@@ -30,6 +28,8 @@
         /*background-color: #fffbdc;*/
         /*background: url('images/paper_fibers.png');*/
         background: rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        color: white;
         border-style: none;
     }
 
@@ -56,6 +56,7 @@
         height: 75px;
         background-color: #ffd242;
         box-shadow: 2px 2px #000000;
+        border-radius: 4px;
 
     }
     .oper:hover {
@@ -65,6 +66,7 @@
     .number {
         background-color: #47abff;
         box-shadow: 2px 2px #000000;
+        border-radius: 4px;
         font-weight: bold;
         padding: 20px;
         margin: 2px;
@@ -79,6 +81,7 @@
         font-weight: bold;
         background-color: #01ff57;
         box-shadow: 2px 2px #000000;
+        border-radius: 4px;
         padding: 25px;
         margin: 2px;
         font-size: 20px;
@@ -151,7 +154,7 @@
         var maxLength = 12;
         var decimalPressOnce = false;
 
-//=============== Enable the Number, Operator, and Decimal to Click, Input, and Limit the input length =================
+//======= Limits the Input Length to 12, enables the Number, Operator, and Decimal to click and input values ===========
 
         var enableInputs = function () {
             if (this.className == 'number' && operator.value == '') {
@@ -219,7 +222,6 @@
                     case '+':
                         answerField.value = parseFloat(firstInput.value) + parseFloat(secondInput.value);
                         firstInput.value = parseFloat(firstInput.value) + parseFloat(secondInput.value);
-                        //  lastoperation = second and operator
                         operator.value= '';
                         secondInput.value = '';
                         break;
@@ -239,7 +241,7 @@
                         break;
 
                     case '/':
-                        // Divide by Zero Easter Egg:
+                        // Divide by Zero Easter Egg ;)
                         if (secondInput.value === '0') {
                             firstInput.value = 'OOPS';
                             operator.value = 'YOU BROKE';
@@ -250,7 +252,6 @@
                             setTimeout(function () { location.reload(true); }, 4000);
                             break;
                         }
-                        // Regular Division:
                         else
                             answerField.value = parseFloat(firstInput.value) / parseFloat(secondInput.value);
                             firstInput.value = parseFloat(firstInput.value) / parseFloat(secondInput.value);
@@ -264,24 +265,19 @@
 
 //===========================================  The Equals Button =======================================================
 
-        btnEquals.addEventListener('click', calculate); // uses the above function when equals button is pressed
+        btnEquals.addEventListener('click', calculate); // uses the calculate function when equals button is pressed
 
         var btnEqualsAgain = function () {
             if (firstInput != '' && secondInput.value == '' && decimalPressOnce == false){
                 decimalPressOnce = true;
             }
         };
-        btnEquals.addEventListener('click', btnEqualsAgain); //allows decimals to be used after equals button is used.
+        btnEquals.addEventListener('click', btnEqualsAgain); //allows decimal to be used once after equals button.
 
     })();
 </script>
 </body>
 </html>
-
-
-
-
-
 
 
 <!--https://66.media.tumblr.com/df4352b7810d2cf35004eeadf44d5938/tumblr_mlgg0xlzkv1r2du9bo1_500.gif-->
