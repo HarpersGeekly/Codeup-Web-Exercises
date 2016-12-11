@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    /*.homepage-hero-module {*/
+        /*border-right: none;*/
+        /*border-left: none;*/
+        /*position: relative;*/
+    /*}*/
+    /*.no-video .video-container video,*/
+    /*.touch .video-container video {*/
+        /*display: none;*/
+    /*}*/
+    /*.no-video .video-container .poster,*/
+    /*.touch .video-container .poster {*/
+        /*display: block !important;*/
+    /*}*/
+    /*.video-container {*/
+        /*position: relative;*/
+        /*bottom: 0%;*/
+        /*left: 0%;*/
+        /*height: 100%;*/
+        /*width: 100%;*/
+        /*overflow: hidden;*/
+        /*background: #000;*/
+    /*}*/
+    /*.video-container .poster img {*/
+        /*width: 100%;*/
+        /*bottom: 0;*/
+        /*position: absolute;*/
+    /*}*/
+    /*.video-container .filter {*/
+        /*z-index: 100;*/
+        /*position: absolute;*/
+        /*background: rgba(0, 0, 0, 0.4);*/
+        /*width: 100%;*/
+    /*}*/
+    /*.video-container video {*/
+        /*position: absolute;*/
+        /*z-index: 0;*/
+        /*bottom: 0;*/
+    /*}*/
+    /*.video-container video.fillWidth {*/
+        /*width: 100%;*/
+    /*}*/
+</style>
+
+
+</body>
+
+<script>
+
+    var newestPost = {
+        title: $('#title').val(),
+        content:$('#content').val()
+    };
+
+
+
+    "use strict";
+    var posts = [];
+    var blog = $.ajax("data/blog.json", {
+        type: "GET"
+    });
+    var blogContent;
+    var populateBlog = function (object) {
+        return '<div id="blogStructure"><br>' + '<h1 id="title">' + object.title + '</h1>'
+                + '<p id="content">' + object.content + '</p>'
+                + '<p id="categories">' + object.categories + '<br>'
+                + '<p id="date">' + object.date + '<br><button id="removePost">Remove</button></div>';
+    };
+    var clearBlog = function() {
+        blogContent = '';
+    };
+    clearBlog();
+
+    blog.done(function (data) {
+        data.forEach(function (object) {
+            blogContent += populateBlog(object);
+        });
+        $('#posts').append(blogContent);
+    });
+
+
+
+
+    //        var newPost = {
+    //            title: "My Third Blog Post",
+    //            content: "I made a third post today",
+    //            categories: [
+    //                "awesome"
+    //            ],
+    //            date: "December, 2 2016"
+    //        };
+
+    $('#submitPost').click(function() {
+        var title = $('#formTopic').val();
+        var content = $('#formContent').val();
+        var categories = $('#formCategories').val();
+        var date = $('#formDate').val();
+        var post = {
+            title: title,
+            content: content,
+            categories: categories,
+            date: date
+        };
+        console.log(post);
+        clearBlog();
+        posts.push(post);
+        posts.forEach(function(object) {
+            blogContent += populateBlog(object);
+        });
+        $('#posts').append(blogContent);
+    });
+
+
+    $('#removePost').click(function() {
+        $(this).parent().remove();
+        posts.splice((posts.length -1), 1)
+    });
+    return false;
+
+
+
+
+
+//    <div class="homepage-hero-module">
+//            <div class="video-container">
+//            <div class="filter"></div>
+//            <video autoplay loop class="fillWidth">
+//            <source src="video/Up.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+//    <source src="video/Up.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+//    </video>
+//    <div class="poster hidden">
+//            <img src="video/Up.jpg" alt="">
+//            </div>
+//            </div>
+//            </div>
+
+
+
+
+//    $( document ).ready(function() {
+//    scaleVideoContainer();
+    //
+    //        initBannerVideoSize('.video-container .poster img');
+    //        initBannerVideoSize('.video-container .filter');
+    //        initBannerVideoSize('.video-container video');
+    //
+    //        $(window).on('resize', function() {
+    //            scaleVideoContainer();
+    //            scaleBannerVideoSize('.video-container .poster img');
+    //            scaleBannerVideoSize('.video-container .filter');
+    //            scaleBannerVideoSize('.video-container video');
+    //        });
+    //
+    //    function scaleVideoContainer() {
+    //
+    //        var height = $(window).height() + 5;
+    //        var unitHeight = parseInt(height) + 'px';
+    //        $('.homepage-hero-module').css('height',unitHeight);
+    //
+    //    }
+    //
+    //    function initBannerVideoSize(element){
+    //
+    //        $(element).each(function(){
+    //            $(this).data('height', $(this).height());
+    //            $(this).data('width', $(this).width());
+    //        });
+    //
+    //        scaleBannerVideoSize(element);
+    //
+    //    }
+    //
+    //    function scaleBannerVideoSize(element){
+    //
+    //        var windowWidth = $(window).width(),
+    //                windowHeight = $(window).height() + 5,
+    //                videoWidth,
+    //                videoHeight;
+    //
+    //        console.log(windowHeight);
+    //
+    //        $(element).each(function(){
+    //            var videoAspectRatio = $(this).data('height')/$(this).data('width');
+    //
+    //            $(this).width(windowWidth);
+    //
+    //            if(windowWidth < 1000){
+    //                videoHeight = windowHeight;
+    //                videoWidth = videoHeight / videoAspectRatio;
+    //                $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+    //
+    //                $(this).width(videoWidth).height(videoHeight);
+    //            }
+    //
+    //            $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+    //
+    //        });
+    //    }
+</script>
+</html>
+
+
+
