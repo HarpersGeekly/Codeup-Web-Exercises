@@ -1,8 +1,10 @@
 
-#myname {
-    font-family: Georgia;
+#myName {
+    padding-bottom: 25px;
+    font-family: "Big Caslon";
     font-size: 30px;
     color: black;
+    letter-spacing: 17px;
 }
 
 #about-section,
@@ -12,75 +14,63 @@
 {
     display: block;
     position: relative;
-    top: -97px;
+    top: -70px;
 }
 
-/*#navbar(thenavbar), #myNavbar {*/
-    /*background: url("../images/brickwall.png");*/
-    /*padding-left: 15px;*/
-    /*padding-right: 20px;*/
-    /*padding-top: 10px;*/
-    /*padding-bottom: 10px;*/
-    /*font-size: 12px;*/
-    /*letter-spacing: 5px;*/
-    /*height: 97px;*/
-
-
-/*}*/
-/*#navbar-nav(thesmallnavbar) {*/
-    /*font-size: 16px;*/
-    /*box-shadow: 0 1px 1px 0 grey, 0 2px 2px 0 rgba(0, 0, 0, .5);*/
-
-/*}*/
-/*#navbar-nav(thesmallnavbar) li a:hover {*/
-    /*color: #1abc9c !important;*/
-/*}*/
-
-
-#thenavbar, #myNavbar {
+#theNavbar {
     background: url("../images/brickwall.png");
-    padding-left: 15px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 12px;
-    letter-spacing: 5px;
-    /*height: 97px;*/
+    padding-top: 5px;
+    letter-spacing: 2px;
+    height: 70px;
+}
+#myNavbar {
+    height: 70px;
 }
 
-#thenavbarwords {
+#theNavbarWords {
+    padding-top: 5px;
+    font-family: Avenir;
     font-size: 16px;
-    box-shadow: 0 1px 1px 0 grey, 0 2px 2px 0 rgba(0, 0, 0, .5);
+    /*box-shadow: 0 1px 1px 0 grey, 0 2px 2px 0 rgba(0, 0, 0, .5);*/
 }
 
-#thenavbarwords li a:hover {
-    color: #1abc9c !important;
+#theNavbarWords li a:hover {
+    color: #3c6985 !important;
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    /*-webkit-animation-timing-function: linear;*/
+    /*#1abc9c*/
 }
 
-#imgcircle {
+#myPortrait {
     margin-top: 75px;
     box-shadow: 0 5px 5px 0 black, 0 5px 15px 0 rgba(0, 0, 0, .5);
 }
 
 #About {
-    /*background: url("images/green_dust_scratch.png");*/
-    background: url("../images/tweed.png");
+
     text-align: center;
     margin-top: 65px;
     padding-bottom: 110px;
+
+    background: #3c6985;
+
 }
 
 #Hello {
-    font-family: Georgia;
-    color: white;
     text-align: center;
+    font-family: Avenir;
+    font-size: 20px;
+    color: white;
+
   }
 
-#myemail {
+#myNumberEmail {
+    font-family: Futura;
     font-size: 24px;
-    font-family: Georgia;
-    color: #1abc9c;
-    text-shadow: 2px 1px black;
+    color: black;
+    /*text-shadow: 2px 1px black;*/
 }
 
 #Resume {
@@ -91,94 +81,85 @@
 
 }
 #ResumeTitle {
-    font-size: 50px;
     text-align: center;
-    padding-top: 25px;
     font-family: Georgia;
+    font-size: 40px;
 }
 
 #Portfolio {
-    background: url("../images/purty_wood.png");
+    text-align: center;
+    padding-bottom: 10px;
+    background: url("../images/tweed.png");
     /*background-color: ;*/
     /*#F0F8FF;*/
             /*auto;*/
-    padding-bottom: 10px;
-    text-align: center;
-
 }
 #PortfolioTitle {
-    padding-top: 25px;
-    font-size: 50px;
     text-align: center;
+    padding-top: 10px;
     font-family: Georgia;
-    /*text-shadow: 1px 1px black;*/
+    font-size: 40px;
+    /*color: #1abc9c;*/
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 #Projects, #P1, #P2, #P3, #P4, #P5, #P6 {
-    padding: 20px;
-    font-size: 24px;
+    padding: 15px;
+    font-family: Georgia;
+    font-size: 20px;
+    color: white;
  }
 
 .img-responsive{
 
-    background: #1abc9c;
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
     -o-transition-duration: 0.4s;
     transition-duration: 0.4s;
     box-shadow: 0 3px 3px 0 black, 0 3px 15px 0 rgba(0, 0, 0, .8);
-}
-
-.img-responsive:hover{
     opacity:0.5;
 }
 
+.img-responsive:hover{
+    opacity: 1;
+}
+
 #Contact {
-    margin-bottom: 16px;
-    background-image: url("https://static.pexels.com/photos/46277/pexels-photo-46277.jpeg");
-    background-size: cover;
-            /*720px;*/
     text-align: center;
+    background-image: url("../images/random_grey_variations.png");
+            /*720px;*/
+
     /*http://hdwallpaperfx.com/wp-content/uploads/2016/09/Sunset-Highway-Lights-Wallpaper.jpg*/
     /*images/green_dust_scratch.png*/
 }
 
 #ContactTitle {
-    color: whitesmoke;
-    font-size: 50px;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;color: whitesmoke;
     font-family: Georgia;
-
-}
-
-#phonenumber {
-    font-family: "Times New Roman";
-    color: white;
-    padding-top: 15px;
-    padding-bottom: 10px;
     font-size: 40px;
-
 }
 
 #social-media-link {
-    color: white;
-    font-size: 100px;
     margin-bottom: 10px;
-
+    font-size: 100px;
+    color: white;
 }
 #social-media-link:hover {
     color: #9acfea;
 }
-
+form {
+    margin-bottom: 21px;
+}
 input[type=text] {
     margin: 10px;
-    width: 300px;
-    border-radius: 5px;
     padding: 5px 5px;
+    width: 400px;
+    border-radius: 5px;
     box-sizing: border-box;
-    font-size: 24px;
     font-family: 'Merienda';
+    font-size: 24px;
     /*text-align: center;*/
     background: url("../images/paper_fibers.png");
     outline: none;
@@ -191,9 +172,9 @@ textarea {
 
     /* To give enough room to type some text */
     height: 250px;
-    width: 300px;
-    font-size: 24px;
+    width: 400px;
     font-family: 'Merienda';
+    font-size: 24px;
     border-radius: 5px;
     background: url("../images/paper_fibers.png");
     outline: none;
@@ -206,28 +187,41 @@ textarea {
 #Submit {
 
     display: inline-block;
-    color: black;
-    background-color: #1abc9c; /* Green */
-    border: 1px solid darkslategrey;
-    margin: 10px;
+    margin: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 100px;
     padding-right: 100px;
+    width: 400px;
     text-align: center;
     text-decoration: none;
-    width: 300px;
+    background-color: #3c6985; /* Green */
+    border: 1px solid darkslategrey;
     border-radius: 5px;
     font-family: "Georgia";
     font-size: 20px;
+    color: black;
     cursor: pointer;
+    outline: none;
 }
 #Submit:hover {
-    background-color: #1b6d85;
+    background-color: #58A0C9;
     opacity: 0.9;
     color: white;
 }
 #Submit:active {
     background-color: white;
     color: white;
+}
+
+.scrollup {
+    width: 58px;
+    height: 48px;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    text-indent: -9999px;
+    background: url('../images/codeup-arrow.png');
+    background-color: transparent;
 }

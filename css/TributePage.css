@@ -26,7 +26,8 @@ body {
 
 }
 #Quote {
-    font-family: Playfair Display;
+    font-family: "Big Caslon";
+    /*Playfair Display*/
     font-size: 35px;
     color: White;
     margin-left: 150px;
@@ -78,21 +79,21 @@ body {
 
 li {
     text-align: center;
-    font-family: Times New Roman;
+    font-family: Avenir;
     list-style-type: none;
 }
 
 #blockquote {
     margin-top: 30px;
     margin-bottom: 30px;
-    font-family: Times New Roman;
+    font-family: Avenir;
     font-size: 22px;
     margin-left: 20px;
     text-align: left;
 }
 #FilmCareer {
     margin: 30px;
-    font-family: Times New Roman;
+    font-family: Avenir;
     font-size: 22px;
     text-align: left;
 
@@ -108,11 +109,16 @@ li {
     padding-bottom: 20px;
     margin: auto;
     font-size: 25px;
-    font-family: Times New Roman;
+    font-family: Avenir;
 }
 #Section2 {
     background-color: rgba(221, 221, 221, 0.6);
     margin-top: 20px;
+}
+
+#bladerunner {
+    width: 640px;
+    height: 500px;
 }
 
 #AlienSet {
@@ -128,13 +134,15 @@ li {
 
 }
 
-#infofooter{
+
+#infoFooter{
     margin-top: 15px;
     margin-bottom: 15px;
     color: white;
     font-size: 20px;
     text-shadow: 1px 1px black;
     text-align: center;
+    font-family: Avenir;
 }
 
 #IMDB {

@@ -6,19 +6,19 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <style>
 
-        #thenavbar {
-            border: black;
-            font-size: 38px;
-            font-family: "American Typewriter";
-            color: #5cb2c9;
-            text-align: center;
-            padding-top: 50px;
+        #theNavbar {
             margin-bottom: 20px;
-            background-color: black;
-            background-size: cover;
+            padding-top: 50px;
             height: 195px;
+            background-size: cover;
             -webkit-clip-path: polygon(0 0, 1600px 0, 1600px 50%, 0 100%);
             clip-path: polygon(0 0, 1600px 0, 1600px 65%, 0 100%) solid black;
+            border: black;
+            background-color: black;
+            text-align: center;
+            font-family: "American Typewriter";
+            font-size: 38px;
+            color: #5cb2c9;
         }
         /*.fullscreen-bg {*/
             /*position: absolute;*/
@@ -79,14 +79,15 @@
         /*}*/
 
         body {
-            background: url('images/grey_wash_wall.png')
+            background: url('images/shattered-island.gif')
         }
         .container {
             width: 75%;
             margin-top: 65px;
-            margin-left: auto;
             margin-right: auto;
+            margin-left: auto;
         }
+
         .Aligner {
             display: flex;
             align-items: center;
@@ -97,139 +98,164 @@
             max-width: 80%;
         }
         .blogStructure {
-            background: url('images/lightpaperfibers.png');
+            position: relative;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.15), 0 5px 25px 0 rgba(0,0,0,0.15);
+            background: url('images/lightpaperfibers.png');
+        }
+        .blogStructure:hover {
+
         }
         .title {
             font-family: "Big Caslon";
             /*text-shadow: 1px 1px .25px black ;*/
         }
+
         .content {
             font-family: Avenir;
         }
+
         .categories {
             font-family: "Sinhala Sangam MN";;
         }
+
         .date {
             font-family: "Futura";
         }
+
         #formTopic {
-            outline: none;
             margin-top: 20px;
             width: 692px;
             height: 50px;
-            font-size: 19px;
-            font-family: "Big Caslon";
-            font-weight: 400 ;
-            background: url('images/paper_fibers.png');
-            border: none;
             border-radius: 1px;
-        }
-        #formTopic:focus {
-            box-shadow: 0 0px 25px rgba(0,0,0,0.40), 0 10px 25px 0 rgba(0,0,0,0.40);
-        }
-        #formContent {
+            border: none;
             outline: none;
+            background: url('images/paper_fibers.png');
+            font-family: "Big Caslon";
+            font-size: 19px;
+            font-weight: 400;
+        }
+
+        #formTopic:focus {
+            box-shadow: 0 0px 25px rgba(0,0,0,0.40), 0 10px 25px 0 rgba(0,0,0,0.40); /* (255, 255, 255, x) for white */
+        }
+
+        #formContent {
             margin-top: 10px;
             width: 692px;
             height: 200px;
-            font-size: 17px;
-            font-family: Avenir;
-            background: url('images/paper_fibers.png');
-            border: none;
             border-radius: 1px;
+            border: none;
+            outline: none;
             resize: none;
+            background: url('images/paper_fibers.png');
+            font-family: Avenir;
+            font-size: 17px;
         }
+
         #formContent:focus {
             box-shadow: 0 0px 25px rgba(0,0,0,0.40), 0 10px 25px 0 rgba(0,0,0,0.40);
         }
+
         #formCategories {
-            outline: none;
             width: 343px;
-            height: 30px;
-            font-size: 17px;
-            font-family: "Sinhala Sangam MN";
-            background: url('images/paper_fibers.png');
-            border: none;
+            height: 30px;outline: none;
             border-radius: 1px;
+            border: none;
+            background: url('images/paper_fibers.png');
+            font-family: "Sinhala Sangam MN";
+            font-size: 17px;
         }
+
         #formCategories:focus {
             box-shadow: 0 0px 0px rgba(0,0,0,0.40), 0 10px 25px 0 rgba(0,0,0,0.40);
         }
+
         #formDate {
-            outline: none;
             margin-top: 10px;
             width: 342px;
             height: 30px;
-            font-size: 17px;
-            font-family: "Sinhala Sangam MN";
-            background: url('images/paper_fibers.png');
-            border: none;
             border-radius: 1px;
+            border: none;
+            outline: none;
+            background: url('images/paper_fibers.png');
+            font-family: "Sinhala Sangam MN";
+            font-size: 17px;
         }
+
         #formDate:focus {
             box-shadow: 0 0px 0px rgba(0,0,0,0.40), 0 10px 25px 0 rgba(0,0,0,0.40);
         }
+
         .wrapper {
             text-align: center;
         }
+
         #submitPost {
             position: relative;
             top: 50%;
             margin-top: 30px;
-            padding: 20px;
-            text-align: center;
-            width: 150px;
-            font-family: "American Typewriter";
-            outline: none;
-            border-radius: 5px;
             margin-bottom: 25px;
-        }
-        #submitPost:hover {
+            padding: 20px;
+            width: 150px;
             border-radius: 5px;
+            outline: none;
+            text-align: center;
+            font-family: "American Typewriter";
+        }
+
+        #submitPost:hover {
             background-color: #26c96c;
             box-shadow: 0 5px 50px rgba(0,0,0,0.19), 0 10px 50px 0 rgba(0,0,0,0.19);
             cursor: pointer;
-            /*-webkit-transition-duration: 0.4s; !* Safari *!*/
-            /*transition-duration: 0.4s;*/
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
         }
+
+
         .removePost {
-            background-color: #b39b99;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            border: 0px solid #000;
-            box-shadow: 1px 1px #000000;
-            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border: none;
             outline: none;
+            background-color: transparent;
+            box-shadow: none;
+            cursor: pointer;
+        }
+
+        .removePostSpan {
+            color: darkgrey;
+            font-size: 15px;
+        }
+
+        .removePostSpan:hover {
+            color: darkred;
+        }
 
 
-        }
-        .removePost:hover {
-            background-color: #c93029;
-        }
         footer {
+            z-index: 9000;
             height: 120px;
             padding-top: 50px;
-            font-size: 24px;
-            font-family: "American Typewriter";
-            color: #5cb2c9;
-            text-align: right;
-            background-color: #000000;
-            background-size: cover;
+            padding-right: 25px;
             -webkit-clip-path: polygon(0 0, 1600px 25%, 1600px 100%, 0 100%);
-            clip-path: polygon(0 0, 1600px 0, 1600px 0, 0 0);
-
+            background-color: #000000;
+            text-align: right;
+            font-family: "American Typewriter";
+            font-size: 24px;
+            color: #5cb2c9;
         }
+
+
     </style>
 </head>
 <body>
 
 
 
-<nav class="navbar navbar-default" id="thenavbar">
+<nav class="navbar navbar-default" id="theNavbar">
     somewhere there is a blog happening.
     <!--<div class="fullscreen-bg">-->
         <!--<video loop muted autoplay poster="video/Blurry-Lights.jpg" class="fullscreen-bg__video">-->
@@ -285,6 +311,7 @@ by Ryan Harper.
 (function() {
         "use strict";
 
+
         var posts = [];
         var blog = $.ajax("data/blog.json", {
             type: "GET"
@@ -294,7 +321,7 @@ by Ryan Harper.
             return '<div class="blogStructure" id="' + index + '">' + '<h1 class="title">' + object.title + " "  + ' </h1>'
                     + '<p class="content">' + object.content + '</p>'
                     + '<p class="categories">' + object.categories + '</p>'
-                    + '<p class="date">' + object.date + '</p>'  + '<button class="removePost" data-post-id="' + index + '"></button></div>' + '<br>';
+                    + '<p class="date">' + object.date + '</p>'  + '<button class="removePost hidden" data-post-id="' + index + '"><span class="glyphicon glyphicon-remove removePostSpan"></span></button></div>' + '<br>';
         };
 
         var clearForm = function() {
@@ -315,6 +342,7 @@ by Ryan Harper.
 //                posts.splice($(this).data("post-id"), 1);
 //                posts.splice($(this).parent('blogStructure').attr('id'), 1);
                 refreshBlog(posts);
+                allowRemovePostIcon();
             });
         };
 
@@ -322,6 +350,8 @@ by Ryan Harper.
             posts = data;
             console.log(data);
             refreshBlog(data);
+            allowRemovePostIcon();
+
         });
 
         $('#submitPost').click(function() {
@@ -339,94 +369,22 @@ by Ryan Harper.
             posts.push(post);
             refreshBlog(posts);
             clearForm();
+            allowRemovePostIcon();
         });
+
+        function allowRemovePostIcon() {
+            $(".blogStructure").hover(
+                    function() {
+                        $(this).children(".removePost").removeClass("hidden");
+                    },
+                    function () {
+                        $(this).children(".removePost").addClass("hidden");
+                    });
+        }
+
+
 //        return false;
 })();
 </script>
 </body>
 </html>
-
-<!--$("button").click(function(){-->
-<!--$("p").remove();-->
-<!--});-->
-
-
-<!--//        var newPost = {-->
-<!--//            title: "My Third Blog Post",-->
-<!--//            content: "I made a third post today",-->
-<!--//            categories: [-->
-<!--//                "awesome"-->
-<!--//            ],-->
-<!--//            date: "December, 2 2016"-->
-<!--//        };-->
-
-
-    <!--//read into function closure-->
-
-    <!--//jQuery is required to run this code-->
-
-<!--//-->
-
-<!--//    var blog = $('div#posts');-->
-<!--//-->
-<!--//    $.ajax({-->
-<!--//        type: 'GET',-->
-<!--//        url: 'data/blog.json',-->
-<!--//        dataType: 'json',-->
-<!--//        success: function(data) {-->
-<!--//            $.each(data, function(index, item) {-->
-<!--//                $.each(item, function(key, value) {-->
-<!--//                    blog.append('<br>' + key + ': ' + value + '</br>');-->
-<!--//                });-->
-<!--//                blog.append('<br/></br>');-->
-<!--//            });-->
-<!--//        }-->
-<!--//    });-->
-
-
-
-
-
-
-
-
-<!--(function() {-->
-<!--"use strict";-->
-<!--var posts = [];-->
-
-<!--var blog = $.ajax("data/blog.json", {-->
-<!--type: "GET"-->
-<!--});-->
-
-
-<!--var blogContent = "";-->
-<!--blog.done(function (data) {-->
-
-<!--data.forEach(function (object) {-->
-
-<!--blogContent += '<br>' + '<h1 id="title">' + object.title + '</h1>'-->
-<!--+ '<p id="content">' + object.content + '</p>'-->
-<!--+ '<p id="categories">' + object.categories + '<br>'-->
-    <!--+ '<p id="date">' + object.date + '<br>';-->
-    <!--});-->
-
-    <!--$('#posts').append(blogContent);-->
-    <!--});-->
-
-
-    <!--var newPost = {-->
-    <!--title: "My Third Blog Post",-->
-    <!--content: "I made a third post today",-->
-    <!--categories: [-->
-    <!--"awesome"-->
-    <!--],-->
-    <!--date: "December, 2 2016"-->
-    <!--};-->
-    <!--posts.push(newPost);-->
-    <!--posts.forEach(function(object) {-->
-    <!--blogContent += '<br>' + '<h1 id="title">' + object.title + '</h1>'-->
-<!--+ '<p id="content">' + object.content + '</p>'-->
-<!--+ '<p id="categories">' + object.categories + '<br>'-->
-    <!--+ '<p id="date">' + object.date + '<br>';-->
-    <!--});-->
-    <!--})();-->

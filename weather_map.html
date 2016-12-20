@@ -10,7 +10,7 @@
 
         body {
             /*background-color: #28a4c9;*/
-            background-image: url('images/random_grey_variations.png');
+            background-image: url('images/px_by_Gre3g.png');
             height: 100%;
         }
 
@@ -19,7 +19,7 @@
             text-align: center;
             font-size: 45px;
             font-family: "Futura";
-            color: #f1d83e;
+            color: #faff96;
         }
 
         .date {
@@ -30,7 +30,11 @@
 
         .highLow {
             font-family: "Futura";
-            font-size: 40px;
+            font-size: 42px;
+        }
+        span {
+            font-size: 20px;
+            color: #555555;
         }
 
         .windSpeed {
@@ -93,7 +97,7 @@
     </style>
 </head>
 <body>
-<h1>Weather Application</h1>
+<h1>Weather Forecast</h1>
 <p id="cityName"></p>
 
 
@@ -164,7 +168,7 @@
 
                 var generateForecastStructure = '<div class="forecastStructure col-md-4">'
                         + '<p class="date">' + "Date: " + forecasts[i].date + '</p>'
-                        + '<p class="highLow">' + Math.round(forecasts[i].high) + "° / " + Math.round(forecasts[i].low) + "° F" + '</p>'
+                        + '<p class="highLow">' + Math.round(forecasts[i].high) + "° " + '<span>' + Math.round(forecasts[i].low) + "° F" + '</span>' + '</p>'
                         + '<img src="http://openweathermap.org/img/w/' + forecasts[i].imageIcon + '.png">'
                         + '<p class="windSpeed">' + "Wind: " + Math.round(forecasts[i].windSpeed) + " mph" + '</p>' + '</div>';
 //                        + '<p class="typeCondition">' + forecasts[i].typeCondition + '</p>'

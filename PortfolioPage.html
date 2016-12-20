@@ -5,32 +5,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/PortfolioPage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top" id="thenavbar">
+<nav class="navbar navbar-default navbar-fixed-top" id="theNavbar">
 
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbarBorder">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
 
-            <h3 id="myname">Ryan Harper</h3>
+            <h3 id="myName">Ryan Harper</h3>
 
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right" style="border: solid" id="thenavbarwords">
-                <li><a href="#about-section">About</a></li>
-                <li><a href="#resume-section">Resume</a></li>
-                <li><a href="#portfolio-section">Portfolio</a></li>
-                <li><a href="#contact-section">Contact</a></li>
+            <ul class="nav navbar-nav navbar-right" id="theNavbarWords">
+                <li><a href="#about-section" class="sliding-link">About</a></li>
+                <li><a href="#resume-section" class="sliding-link">Resume</a></li>
+                <li><a href="#portfolio-section" class="sliding-link">Portfolio</a></li>
+                <li><a href="#contact-section" class="sliding-link">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -41,10 +42,10 @@
 <a id="about-section"></a>
 
 <div class="container-fluid .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0" id="About">
-    <img class="img-circle .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0" src="http://i64.tinypic.com/8vy9md.jpg" width="350" height="450" id="imgcircle">
+    <img class="img-circle .col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0" src="http://i64.tinypic.com/8vy9md.jpg" width="350" height="450" id="myPortrait">
     <h3 id="Hello">Hello, I am Ryan Harper. I study Full Stack Web Development at Codeup Bootcamp in San Antonio, Texas.
     Software is a career change from a background in advertising sales and retail management. I couldn't be more happy
-        about my new adventure.</h3><p id="myemail">210.602.3618  |  HarperRyanC@gmail.com</p>
+        about my new adventure.</h3><p id="myNumberEmail">210.602.3618  |  HarperRyanC@gmail.com</p>
 
 </div>
 
@@ -61,26 +62,26 @@
 
     <div class="row" id="Projects">
         <div class="col-xs-6 col-md-4" id="P1">
-            <p>Project Placeholder</p>
-            <a href="http://localhost:63342/Codeup-web-exercises/TributePage.html?_ijt=alto2evts8754bi7jg8fie15t1" target="_blank"><img class="img-responsive" src="https://www.whistler.com/images/placeholders/200x200.gif"></a>
+            <p>Tribute Page</p>
+            <a href="http://localhost:63342/Codeup-web-exercises/TributePage.html?_ijt=alto2evts8754bi7jg8fie15t1" target="_blank"><img class="img-responsive" src="images/RidleyScottTribute.png"></a>
         </div>
 
         <div class="col-xs-6 col-md-4" id="P2">
-            <p>Project Placeholder</p>
-            <a href="http://localhost:63342/Codeup-web-exercises/TributePage.html?_ijt=alto2evts8754bi7jg8fie15t1" target="_blank"><img class="img-responsive"  src="https://www.whistler.com/images/placeholders/200x200.gif"></a>
+            <p>JavaScript Calculator</p>
+            <a href="http://localhost:63342/Codeup-web-exercises/CalculatorRevised.html?_ijt=6at7mh0and56lsfs2b8p4jpa39" target="_blank"><img class="img-responsive"  src="images/JavascriptCalculator.png"></a>
         </div>
 
         <div class="col-xs-6 col-md-4" id="P3">
-            <p>Project Placeholder</p>
-            <a href="http://localhost:63342/Codeup-web-exercises/TributePage.html?_ijt=alto2evts8754bi7jg8fie15t1" target="_blank"><img class="img-responsive"  src="https://www.whistler.com/images/placeholders/200x200.gif"></a>
+            <p>AJAX Blog</p>
+            <a href="http://localhost:63342/Codeup-web-exercises/ajax_blog.html?_ijt=q8q0l6b3h2h1i5q2uvc88i11il" target="_blank"><img class="img-responsive"  src="images/AjaxBlog.png"></a>
         </div>
         <div class="col-xs-6 col-md-4" id="P4">
-            <p>Project Placeholder</p>
-            <a href="http://localhost:63342/Codeup-web-exercises/Coffee%20Bean%20Order%20Form.html?_ijt=alto2evts8754bi7jg8fie15t1" target="_blank"><img class="img-responsive" src="https://www.whistler.com/images/placeholders/200x200.gif"></a>
+            <p>API Weather Map</p>
+            <a href="http://localhost:63342/Codeup-web-exercises/weather_map.html?_ijt=7tr3f2qq0bv2tcaovegg3fjgps" target="_blank"><img class="img-responsive" src="images/WeatherMap.png"></a>
         </div>
         <div class="col-xs-6 col-md-4" id="P5">
-            <p>Project Placeholder</p>
-            <a href="http://localhost:63342/Codeup-web-exercises/Coffee%20Bean%20Order%20Form.html?_ijt=alto2evts8754bi7jg8fie15t1" target="_blank"><img class="img-responsive" src="https://www.whistler.com/images/placeholders/200x200.gif"></a>
+            <p>Simon Memory Game</p>
+            <a href="http://localhost:63342/Codeup-web-exercises/SimonMemoryGame.html?_ijt=g01bilbeu61pk1d1n3m44bir0a" target="_blank"><img class="img-responsive" src="images/SimonMemoryGame.png"></a>
         </div>
         <div class="col-xs-6 col-md-4" id="P6">
             <p>Project Placeholder</p>
@@ -138,18 +139,21 @@
         <button type="submit" id="Submit">Send!</button>
 
     </form>
-
-
+    <a href="#" class="scrollup"></a>
 
 </div>
-
-<script>
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/PortfolioPage.js"></script>
 </body>
 </html>
+
+
+
+<!--<script>-->
+    <!--src="https://code.jquery.com/jquery-1.12.4.min.js"-->
+    <!--integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="-->
+    <!--crossorigin="anonymous"</script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 
 
 <!--<div id="myCarousel" class="carousel slide bg-2" data-ride="carousel">-->
