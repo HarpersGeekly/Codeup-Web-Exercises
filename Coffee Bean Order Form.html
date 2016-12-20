@@ -13,7 +13,6 @@
     <style>
 
 
-
         @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Merienda|Pompiere');
 
 
@@ -213,10 +212,15 @@
     <button type="Submit">Submit Your Order!</button>
     </div>
 
-    </div>
+
 </form>
-
-
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    $('input[type="checkbox"]').on('change', function() {
+        $('input[type="checkbox"]').not(this).prop('checked', false);
+    });
+</script>
 </body>
 </html>
 
