@@ -3,6 +3,8 @@
  */
 (function () {
 
+    // Clicking on the links on the navbar creates a smooth scrolling effect
+
     $(".sliding-link").click(function(e) {
         e.preventDefault();
 
@@ -12,7 +14,7 @@
         }, 100)
     });
 
-
+    // scrolling down the page to a specific location will reveal a 'Back to Top' link
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1000) {

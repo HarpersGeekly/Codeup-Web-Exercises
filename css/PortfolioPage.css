@@ -52,8 +52,9 @@
 
     text-align: center;
     margin-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 110px;
-
     background: #3c6985;
 
 }
@@ -63,7 +64,8 @@
     font-family: Avenir;
     font-size: 20px;
     color: white;
-
+    margin-left: auto;
+    margin-right: auto;
   }
 
 #myNumberEmail {
@@ -112,7 +114,7 @@
  }
 
 .img-responsive{
-
+    width: auto;
     -webkit-transition-duration: 0.4s;
     -moz-transition-duration: 0.4s;
     -o-transition-duration: 0.4s;
@@ -222,6 +224,5 @@ textarea {
     right: 100px;
     display: none;
     text-indent: -9999px;
-    background: url('../images/codeup-arrow.png');
-    background-color: transparent;
+    background: url('../images/codeup-arrow.png') transparent;
 }
