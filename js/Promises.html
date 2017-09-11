@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promises</title>
+</head>
+<body>
+<script>
+
+    "use strict";
+
+    // $.get("url", options).done().fail()
+
+    const getRandomNumber = new Promise(( resolve, reject) => {
+
+        let random = Math.random();
+        if (random > 0.5) {
+//            resolve(random);
+             resolve({random: random, msg: "resolved", status: "OK"});
+        } else {
+            reject(random);
+        }
+    });
+//    getRandomNumber.then( (number) => console.log("we got the number ") + number );
+    getRandomNumber.then( (response) => console.log(`we got the number ${response.random} ${response.msg}`) );
+    getRandomNumber.catch( (number) => console.error("the number is less than 0.5 " + number) );
+
+
+</script>
+</body>
+</html>
