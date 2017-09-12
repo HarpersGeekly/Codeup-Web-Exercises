@@ -54,7 +54,7 @@ const users = [
 // Use .reduce to transform the array into a new object where the object's keys are ids and the values are objects that represent each user
 // Remember... { key:value }
     let newObject = users.reduce((tempObject, user) => {
-        tempObject[user.id] = user; //key[] = value. Create a property with "user.id" as the key and the "userObject" as the value. The squared brackets return the actual value of that user property "id".
+        tempObject[user.id] = user; //key[] = value. Create an object property with "user.id" as the key and the "userObject" as the value. The squared brackets return the actual value of that user property "id".
         return tempObject;
     }, {}); // the first tempObject will be empty. The next loop will populate user.
     console.log(newObject); //the array is reduced down to a single value that was transformed into an object.
