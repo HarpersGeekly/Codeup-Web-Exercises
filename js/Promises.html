@@ -26,6 +26,42 @@
     getRandomNumber.catch( (number) => console.error("the number is less than 0.5 " + number) );
 
 
+
+
+//    Write a function named wait that accepts a number as a parameter, and returns a promise that resolves after the passed number of milliseconds.
+    // can also use: const wait = () => {}
+    function wait(number) {
+        return new Promise((resolve) => {
+            setTimeout(resolve, number);
+            //setTimeout(() => {
+//            resolve();
+//        }, number);
+        })
+    }
+
+    const printMsg = (number) => {
+        console.log("This shows up after " + number / 1000 + " seconds")
+    };
+
+    wait(2000).then(response => printMsg(2000));
+    wait(4000).then(response => printMsg(4000));
+
+// Create a function that accepts a github username, and returns a promise that resolves with the date of the last commit that user made. Reference the github api documentation to achieve this.
+    // token 3ef3cb7d52a8c69fa8ccdb4243191c52154a658a
+    // the "promise" in this case is the fetch method that returns a promise. Given below in the exercise
+    // fetch (url, headers: {'Authorization': 'token 3ef3cb7d52a8c69fa8ccdb4243191c52154a658a'}
+
+    function getLastUserCommit(username) {
+        return fetch(`https://api.github.com/users/${username}/repos`, {
+            headers: {
+                'Authorization': 'token 3ef3cb7d52a8c69fa8ccdb4243191c52154a658a'}
+        })
+            .then(response => response.json()) // then convert the response into a JSON readable
+            .then(repos => repos.map(repo => repo.pushed_at).sort().reverse()[0]);
+    }
+    getLastUserCommit('HarpersGeekly')
+        .then( (lastDate) => console.log(lastDate) ); //what we fetched is returned here
+
 </script>
 </body>
 </html>
