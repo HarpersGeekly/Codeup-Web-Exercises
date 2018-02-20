@@ -3,14 +3,14 @@
 // TODO: Ask the user for their name.
 //       Keep asking if an empty input is provided.
 
-var userName = prompt("What's your name?");
+var username = prompt("What's your name?");
 
 while (!username) {
     username = prompt('Give me your name.');
 }
 
 // TODO: Show an alert message that welcomes the user based on their input.
-    alert("Welcome, " + userName + "!");
+    alert("Welcome, " + username + "!");
 
 
 // TODO: Ask the user if they like pizza.
@@ -36,5 +36,5 @@ function getUserInput(message) {
         }
         return response
 }
-var username = getUserInput ("what is your name?");
-    console.log(username);
+var getUsername = getUserInput ("what is your name?");
+    console.log(getUsername);
