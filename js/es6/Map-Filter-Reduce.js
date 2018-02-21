@@ -43,23 +43,36 @@ const users = [
 // Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
 // users.filter((argument) =return> );
 
-    let filteredLanguageUsers = users.filter((user) => user.languages.length >= 3);
+    let filteredLanguageUsers = users.filter(user => user.languages.length >= 3);
     console.log(filteredLanguageUsers);
 
-
 // Use .map to create an array of strings where each element is a user's email address
-    let usersEmails = users.map((user) => user.email);
+
+    let usersEmails = users.map(user => user.email);
     console.log(usersEmails);
 
 // Use .reduce to transform the array into a new object where the object's keys are ids and the values are objects that represent each user
 // Remember... { key:value }
+
     let newObject = users.reduce((tempObject, user) => {
-        tempObject[user.id] = user; //key[] = value. Create an object property with "user.id" as the key and the "userObject" as the value. The squared brackets return the actual value of that user property "id".
+        tempObject[user.id] = user; //key[] = value. Create an object property with "user.id" as the key and the "userObject" as the value.
+        // The squared brackets return the actual value of that user property "id".
         return tempObject;
     }, {}); // the first tempObject will be empty. The next loop will populate user.
     console.log(newObject); //the array is reduced down to a single value that was transformed into an object.
     // The keys are now the id's, and the values are the object representing each user.
     // The output in this helps eliminate the 0 index of an array. An array will have the id's off. Now, with the object, the id key matches the index.
+
+//essentially..
+const userObject2 = users.reduce((accum, { id, name, email, languages}) => {
+    accum[id] = {
+        name,
+        email,
+        languages
+    };
+    return accum;
+}, {});
+console.log(userObject2);
 
 
 
