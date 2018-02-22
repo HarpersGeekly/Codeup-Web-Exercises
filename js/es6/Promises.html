@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promises</title>
+</head>
+<body>
+
+<h3>Using Promises</h3>
+<h4>Random Number Between 1 - 10...</h4>
+<div id="contentGoesHere"></div>
+<h4>Timer to 5: <span id="contentGoesHere2"><span></h4>
+<h4>Last date of GitHub push: <span id="contentGoesHere3"></span></h4>
+
+<script>
+
+    "use strict";
+
+    // $.get("url", options).done().fail()
+    // ============================================================================================================================================
+
+    const getRandomNumber = new Promise((resolve, reject) => {
+
+        let random = Math.floor(Math.random() * 10) + 1;
+        if (random > 5) {
+//            resolve(random);
+             resolve({
+                 random: random,
+                 msg: "Resolved! .then() runs",
+                 status: "OK"});
+        } else {
+            // reject(random);
+            reject({
+                random: random,
+                msg: "Rejected! .catch() runs",
+                status: "OK"
+            })
+        }
+    });
+//    getRandomNumber.then( (number) => console.log("we got the number ") + number );
+//    getRandomNumber.catch( (number) => document.getElementById("contentGoesHere").innerHTML = "the number is less than 5: " + number);
+
+    getRandomNumber.then( (resolve) => console.log(`the number ${resolve.random} is more than 5. ${resolve.msg}`) ); // when the resolve occurs, .then() runs
+    getRandomNumber.then( (resolve) => document.getElementById("contentGoesHere").innerHTML = `the number ${resolve.random} is more than 5. ${resolve.msg}`);
+
+    getRandomNumber.catch( (reject) => console.error("the number " + reject.random + " is less than 5. " + reject.msg)); // when the reject occurs, .catch() runs
+    getRandomNumber.catch( (reject) => document.getElementById("contentGoesHere").innerHTML = `the number ${reject.random} is less than 5. ${reject.msg}`);
+
+    // ============================================================================================================================================
+//    Write a function named wait that accepts a number as a parameter, and returns a promise that resolves after the passed number of milliseconds.
+    // ============================================================================================================================================
+
+    // function wait(number) {
+    const wait = (number) => { // functionality inside this function should never change. Can't reassign to a constant
+        return new Promise((resolve) => {
+            setTimeout(resolve, number); //callback function that requires parameters.
+            //setTimeout(() => {
+//            resolve();
+//        }, number);
+        })
+    };
+
+    const printMsg = (number) => {
+        console.log(number / 1000);
+        document.getElementById("contentGoesHere2").innerHTML = (number / 1000);
+    };
+
+
+    wait(1000).then((response) => printMsg(1000));
+    wait(2000).then((response) => printMsg(2000));
+    wait(3000).then((response) => printMsg(3000));
+    wait(4000).then((response) => printMsg(4000));
+    wait(5000).then((response) => printMsg(5000));
+
+    // ============================================================================================================================================
+    // Create a function that accepts a github username, and returns a promise that resolves with the date of the last commit that user made.
+    // Reference the github api documentation to achieve this.
+    // token 3ef3cb7d52a8c69fa8ccdb4243191c52154a658a
+
+    // the "promise" in this case is the fetch method that returns a promise. Given below in the exercise
+    // fetch (url, headers: {'Authorization': 'token 3ef3cb7d52a8c69fa8ccdb4243191c52154a658a'}
+    // ============================================================================================================================================
+
+    // function getLastUserCommit(username) {
+    const getDateOfLastUserCommit = (username) => {
+        let url = `https://api.github.com/users/${username}/repos`;
+        return fetch(url, {
+            headers: {
+                'Authorization': 'token 782b0dea922015706a32a17184e38150a8907a43'}
+        })
+
+            .then(response => response.json()) // then convert the response into a JSON readable
+            .then(repos => repos.map(repo => repo.pushed_at).sort().reverse()[0])
+            .then( (lastDate) => document.getElementById("contentGoesHere3").innerHTML = new Date(lastDate)); //what we fetched is returned here, new Date() provides "format"
+    };
+    getDateOfLastUserCommit('HarpersGeekly');
+
+</script>
+</body>
+</html>
