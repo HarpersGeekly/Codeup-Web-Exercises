@@ -75,6 +75,24 @@ for (var i = 100; i >= 5; i -= 5) {
     console.log(i);
 }
 
+// count up the average of 1 through 10 (in es6)
+console.log("average of 1 through 10");
+let values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sum = values.reduce((previous, current) => current + previous);
+let avg = sum / values.length;
+console.log(avg);
+
+    //
+    // var ten = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // var total = 0;
+    //
+    // for (var i = 1; i <= ten.length; i++) {
+    //     total += ten[i];
+    // }
+    // var avg = total / ten.length;
+
+
+
 </script>
 
 
