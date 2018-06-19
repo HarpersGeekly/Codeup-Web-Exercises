@@ -48,7 +48,7 @@ states.forEach(function (element, index, array){
     console.log('state: '+ element+ " i " +index);
 })
 
-var myArray = [1,2,3,4]
+var myArray = [1,2,3,4];
 
 console.log(myArray.push(5));
 console.log(myArray.push(1));
@@ -56,3 +56,31 @@ console.log(myArray.push(3));
 console.log(myArray);
 
 
+/**
+ * TODO:
+ * Create the following three functions, each will accept an array and
+ * return an an element from it
+ * - first: returns the first item in the array
+ * - second: returns the second item in the array
+ * - last: returns the last item in the array
+ *
+ * Example:
+ *  > first([1, 2, 3, 4, 5]) // returns 1
+ *  > second([1, 2, 3, 4, 5]) // returns 2
+ *  > last([1, 2, 3, 4, 5]) // return 5
+ */
+
+function getFirstElement() {
+    console.log("1st element:" + states[0])
+}
+getFirstElement();
+
+function getSecondElement() {
+    console.log("2nd element:" + states[1])
+}
+getSecondElement();
+
+function getThirdElement() {
+    console.log("3rd element:" + states[2])
+}
+getThirdElement();
