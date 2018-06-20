@@ -1,0 +1,79 @@
+(function(){
+    "use strict";
+
+// BONUSES 1:
+// Write a program to toggle all characters in a string: in a given string,
+// toggle all characters to their opposite case. Special characters will not change.
+
+// Example input: "aBc12#""
+// Example output: "AbC12#"
+
+    let input = prompt("give me a string");
+    let result = input.split('').map(function(char){
+        // The map() method creates a new array with the results of calling a function for every array element,
+        // in this case "char".
+        // The map() method calls the provided function once for each element in an array, in order:
+            return char === char.toUpperCase()
+            ? char.toLowerCase()
+            : char.toUpperCase()
+        }).join('');
+        console.log(result);
+
+// ES6:
+// let resultES6 = input.split('')
+//         .map((char) =>
+//             char === char.toUpperCase()
+//                 ? char.toLowerCase()
+//                 : char.toUpperCase()
+//         ).join('');
+//     console.log(resultES6);
+
+    //OR...convert the string to an array of 1-character substrings (using split),
+    // process this array and convert it back to a string when you're done (using join).
+    let swapCase = function(str){
+        let chars = str.split("");
+        for(let i = 0; i<chars.length; i++){
+            if(chars[i] === chars[i].toLowerCase()){
+                chars[i] = chars[i].toUpperCase();
+            }else {
+                chars[i] = chars[i].toLowerCase();
+            }
+        }
+        str = chars.join("");
+        console.log(str);
+    };
+
+    let text = 'So, today we have REALLY good day';
+    swapCase(text);
+
+// BONUS 2:
+// Write a program that takes a given string appended with a number at the end.
+// The program will check the length of the string to verify the string is equal to the number appended.
+// If the number appended equals the string length, output "Yes". if the number appended does not equal the string length,
+// output "No".
+
+// Example Input: "geek5"
+// Example Output: "Yes"
+
+// Example Input: "codingchallenge25"
+// Example Output: "No"
+
+    let input2 = prompt("Provide a string with a number at the end");
+    let length = input2.length;
+    let number = parseInt(input2.match(/(\d+)$/)[0], 10);
+    // The match() method searches a string for a match against a regular expression,
+    // and returns the matches as an Array object.
+
+    if(length === number) {
+        console.log("Input:" + input2);
+        console.log("number: " + number);
+        console.log("length: " + length);
+        console.log("Yes, they match.");
+    } else {
+        console.log("Input:" + input2);
+        console.log("number: " + number);
+        console.log("length: " + length);
+        console.log("No, they don't match.");
+    }
+
+})();
