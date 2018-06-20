@@ -65,7 +65,38 @@ books.forEach(function (book, index) {
 
 });
 
-// end loop here
+/**
+ * Bonus:
+ * - Create a function named `createBook` that accepts a title and author
+ *   name and returns a book object with the properties described
+ *   previously. Refactor your code that creates the books array to instead
+ *   use your function.
+ *
+ * - Create a function named `showBookInfo` that accepts a book object and
+ *   outputs the information described above. Refactor your loop to use your
+ *   `showBookInfo` function.
+ */
+
+function createBook(title, firstName, lastName) {
+
+    let book = {
+        title: title,
+        author: {
+            firstName: firstName,
+            lastName: lastName
+        }
+    };
+    return book;
+}
+let book = createBook("Dark Matter", "Guy", "Something");
+
+function showBookInfo(bookObject) {
+    console.log(bookObject.title);
+    console.log(bookObject.author.firstName);
+    console.log(bookObject.author.lastName);
+}
+showBookInfo(book);
+
 </script>
 </body>
 </html>
