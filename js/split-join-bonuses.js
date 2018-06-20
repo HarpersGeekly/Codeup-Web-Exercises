@@ -16,7 +16,7 @@
         // The map() method calls the provided function once for each element in an array, in order:
             return char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
         }).join('');
-    
+
         console.log(result);
 
 // ES6:
