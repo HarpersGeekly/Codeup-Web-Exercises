@@ -9,40 +9,32 @@
 </head>
 <body>
 <script>
-
-
-    "use strict";
-//
-//    // create a circle object
-//    var circle = {
-//        radius: 3,
-//        getArea: function() {
-//            var area = (Math.PI * circle.radius(Math.pow(2, 1)));
-//        return area}
-//    };
-//    console.log(getArea);
-
     (function() {
         "use strict";
 
         // create a circle object:
 
-        var circle = {
+        let circle = {
             radius: 3,
             getArea: function() {
-                var area = (Math.PI * (Math.pow(this.radius,2)));
+                let area = (Math.PI * (Math.pow(this.radius,2)));
                 return area;
             },
             logInfo: function(doRounding) {
-// If doRounding is true, round the result to the nearest integer.
-                var round;
-                if (doRounding == true) { // if you want to round your variable, then do the function to round.
-                    round = (Math.round(this.getArea()));
-                } else {
-                    round = (this.getArea()); // otherwise just spit out the area that you got from getArea function.
-                }
-                console.log("Area of a circle with radius: " + this.radius + ", is: " + round);
 
+                // If doRounding is true, round the result to the nearest integer:
+
+                // var round;
+                // if (doRounding == true) { // if you want to round your variable, then do the function to round.
+                //     round = (Math.round(this.getArea()));
+                // } else {
+                //     round = (this.getArea()); // otherwise just spit out the area that you got from getArea function.
+                // }
+                // console.log("Area of a circle with radius: " + this.radius + ", is: " + round);
+
+                //ternary:
+                let area = (doRounding) ? Math.round(this.getArea()) : this.getArea();
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + area)
             }
         };
         // log info about the circle:
