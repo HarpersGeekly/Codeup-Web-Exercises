@@ -36,6 +36,7 @@
     (function() {
         "use strict";
 
+        var mapCanvas = document.getElementById("map-canvas");
         var mapOptions = {
             zoom: 15,
             center: {
@@ -58,11 +59,11 @@
 //            }
 //            // Show an error message with the status if our request fails
 //            alert("Geocoding was not successful - STATUS: " + status);
-//        });
+//        });g
 //
 //
 //        // Render the map
-        var map1 = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        var map1 = new google.maps.Map(mapCanvas, mapOptions);
 
 
 //        var restaurants = [
