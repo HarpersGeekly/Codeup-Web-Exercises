@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <Title>Google Maps API REVISED</Title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        #map-canvas {
+            width: 1024px;
+            height: 768px;
+
+        }
+        #firstHeading {
+            color: #1abc9c;
+            text-shadow: 1px 1px black;
+            text-align: center;
+        }
+        #bodyContent {
+            text-align: center;
+            font-size: 16px;
+        }
+        /*#infoWindow {*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<h1></h1>
+
+<div id="map-canvas"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdEhJIIBoaAFGkkOlpPjqJwRLgjQOKOfg"></script>
+<script type="text/javascript">
+
+
+    (function() {
+        "use strict";
+
+        var mapCanvas = document.getElementById("map-canvas")
+        var mapOptions = {
+            zoom: 12,
+            center: {
+                lat: 29.54,
+                lng: -98.49
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map1 = new google.maps.Map(mapCanvas, mapOptions);
+
+        var restaurants = [
+            {   name: "Magnolia Pancake Haus",
+                address:"606 Embassy Oaks #100, San Antonio, TX, 78216",
+                hoursOperation: "7:00 A.M. to 2:00 P.M. 7 Days a Week! No Reservations",
+                description: "is a bustling cafe that draws crowds for their award-winning scratch kitchen prepared American breakfasts & lunches.",
+                linkToWebsite:"http://www.magnoliapancakehaus.com/",
+                linkToMenu:"http://www.magnoliapancakehaus.com/download/Magnolia%20Pancake%20Haus%20Menu.2015.pdf?inline",
+                image1:"http://qhhc4lhx2vj36rdg.zippykid.netdna-cdn.com/wp-content/uploads/Commercial-Magnolia-Pancake-Haus.jpg",
+                image2:"http://goodtaste.tv/wp-content/uploads/2016/05/Magnolia-Pancake--1024x681.jpg"
+
+            },
+
+            {   name: "Alamo Cafe",
+                address:"14250 San Pedro Ave, San Antonio, TX, 78232",
+                hoursOperation: "10:45 A.M. to 11:00 P.M, 12AM (FRI & SAT)",
+                description: "features steaming fajitas, frozen margaritas & homemade flour tortillas that draw crowds to this established Tex-Mex destination.",
+                linkToWebsite:"http://www.alamocafe.com/",
+                linkToMenu:"http://www.alamocafe.com/menu/",
+                image1:"http://megasystemsinc.com/wp-content/uploads/2015/01/img278.jpg",
+                image2:"http://mclifesanantonio.com/wp-content/uploads/2015/07/alamo-cafe-5.jpg"
+            },
+            {   name:"Dough Napoletana Pizzeria",
+                address:"6989 Blanco Rd, San Antonio, TX, 78216",
+                hoursOperation: "10:45 A.M. to 11:00 P.M, 12AM (FRI & SAT)",
+                description: "is a buzzy eatery with authentic Neapolitan pizzas, salads, housemade burrata & an all-Italian wine list.",
+                linkToWebsite:"http://www.doughpizzeria.com/",
+                linkToMenu:"",
+                image1:"http://www.doughpizzeria.com/images/uploads/161/dough_remod_8__banner.jpg",
+                image2:"http://www.doughpizzeria.com/images/uploads/2/home_banner_2__banner.jpg"
+            }
+];
+        var geocoder = new google.maps.Geocoder();
+
+        restaurants.forEach((restaurant) => {
+            geocoder.geocode({"address": restaurant.address}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                        var marker = new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        animation: google.maps.Animation.DROP,
+                        map: map1
+                   });
+                       var infoWindow = new google.maps.InfoWindow({
+                        content: '<div id="infoWindow">'+
+                        '<h1 id="firstHeading">' + restaurant.name + '</h1><hr>'+
+                        '<div id="bodyContent">' +
+                        '<p><b>' + restaurant.address + '<br>'+ restaurant.hoursOperation + '</b></p>' +
+                        '<p><b><a href="' + restaurant.linkToWebsite + '" target="_blank">' + restaurant.name + '</a></b> ' + restaurant.description +'</p>' +
+                        '<b><a href="' + restaurant.linkToMenu + '" target="_blank">Click to see menu (if available).</a></b>' +
+                        '<img src="' + restaurant.image1 + '" style="width: 90%">' +
+                        '<img src="' + restaurant.image2 + '" style="width: 90%">' +
+                        '</div></div>'
+                       });
+                marker.addListener('click', function() {
+                    infoWindow.open(map1, marker);
+                    }, false);
+
+                } else {
+                    alert("Geocoding was not successful - STATUS: " + status);
+                }
+           });
+        });
+    })();
+</script>
+</body>
+<!--//
