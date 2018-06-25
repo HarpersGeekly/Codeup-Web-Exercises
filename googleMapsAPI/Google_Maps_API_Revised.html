@@ -34,8 +34,8 @@
     (function() {
         "use strict";
 
-        var mapCanvas = document.getElementById("map-canvas")
-        var mapOptions = {
+        let mapCanvas = document.getElementById("map-canvas");
+        let mapOptions = {
             zoom: 12,
             center: {
                 lat: 29.54,
@@ -44,9 +44,9 @@
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        var map1 = new google.maps.Map(mapCanvas, mapOptions);
+        let map1 = new google.maps.Map(mapCanvas, mapOptions);
 
-        var restaurants = [
+        let restaurants = [
             {   name: "Magnolia Pancake Haus",
                 address:"606 Embassy Oaks #100, San Antonio, TX, 78216",
                 hoursOperation: "7:00 A.M. to 2:00 P.M. 7 Days a Week! No Reservations",
@@ -77,35 +77,36 @@
                 image2:"http://www.doughpizzeria.com/images/uploads/2/home_banner_2__banner.jpg"
             }
 ];
-        var geocoder = new google.maps.Geocoder();
+        let geocoder = new google.maps.Geocoder();
 
         restaurants.forEach((restaurant) => {
-            geocoder.geocode({"address": restaurant.address}, function (results, status) {
+
+            geocoder.geocode({"address": restaurant.address}, ((results, status) => {
                 if (status == google.maps.GeocoderStatus.OK) {
-                        var marker = new google.maps.Marker({
+                        let marker = new google.maps.Marker({
                         position: results[0].geometry.location,
                         animation: google.maps.Animation.DROP,
                         map: map1
                    });
-                       var infoWindow = new google.maps.InfoWindow({
+                       let infoWindow = new google.maps.InfoWindow({
                         content: '<div id="infoWindow">'+
                         '<h1 id="firstHeading">' + restaurant.name + '</h1><hr>'+
                         '<div id="bodyContent">' +
                         '<p><b>' + restaurant.address + '<br>'+ restaurant.hoursOperation + '</b></p>' +
                         '<p><b><a href="' + restaurant.linkToWebsite + '" target="_blank">' + restaurant.name + '</a></b> ' + restaurant.description +'</p>' +
-                        '<b><a href="' + restaurant.linkToMenu + '" target="_blank">Click to see menu (if available).</a></b>' +
+                        '<b><a href="' + restaurant.linkToMenu + '" target="_blank">Click to see menu (if available)</a></b>' +
                         '<img src="' + restaurant.image1 + '" style="width: 90%">' +
                         '<img src="' + restaurant.image2 + '" style="width: 90%">' +
                         '</div></div>'
                        });
-                marker.addListener('click', function() {
+                marker.addListener('click', () => {
                     infoWindow.open(map1, marker);
                     }, false);
 
                 } else {
                     alert("Geocoding was not successful - STATUS: " + status);
                 }
-           });
+           }))
         });
     })();
 </script>
