@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps Multiple Markers</title>
+    <style>
+        #map_canvas {
+            border:1px solid black;
+            height: 768px;
+            width: 1024px;
+            border-radius: 4px;
+        }
+        .firstHeading {
+            color: #1abc9c;
+            text-shadow: 1px 1px black;
+            text-align: center;
+        }
+        .bodyContent {
+            text-align: center;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div id="map_canvas"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmIsoi0mi_5NMC9bZlqQu1k22IYGohNq4"></script>
+
+<!-- Script to show address on map -->
+<script type="text/javascript">
+    (function() {
+        "use strict";
+
+        var map;
+        var markers = [];
+        var restaurants = [
+            ['<div class="infoWindow">'+
+            '<h1 class="firstHeading">Magnolia Pancake Haus</h1><hr>'+
+            '<div class="bodyContent">' +
+            '<p><b>Embassy Oaks Shopping Center, 606 Embassy Oaks #100, San Antonio, TX 78216<br>'+
+            ' 7:00 A.M. to 2:00 P.M. 7 Days a Week! No Reservations</b></p>'+
+            '<p><b><a href="http://www.magnoliapancakehaus.com/" target="_blank">Magnolia Pancake Haus</a></b>' +
+            ' is a bustling cafe that draws crowds for their award-winning scratch kitchen prepared American breakfasts & lunches.' +
+            '</p><b><a href="http://www.magnoliapancakehaus.com/download/Magnolia%20Pancake%20Haus%20Menu.2015.pdf?inline"'+
+            ' target="_blank">Click to see menu.</a></b>' +
+            '<img src="http://qhhc4lhx2vj36rdg.zippykid.netdna-cdn.com/wp-content/uploads/Commercial-Magnolia-Pancake-Haus.jpg" style="width: 90%">' +
+            '<img src="http://goodtaste.tv/wp-content/uploads/2016/05/Magnolia-Pancake--1024x681.jpg" style="width: 90%">' +
+            '</div></div>', 29.564166, -98.488887, 3],
+
+            ['<div class="infoWindow">'+
+            '<h1 class="firstHeading">Alamo Cafe</h1><hr>'+
+            '<div class="bodyContent">' +
+            '<p><b>14250 San Pedro Ave, San Antonio, TX, 78232<br>'+
+            ' 10:45 A.M. to 11:00 P.M, 12AM (FRI & SAT)</b></p>'+
+            '<p><b><a href="http://www.alamocafe.com/" target="_blank">Alamo Cafe</a></b>' +
+            ' Fajitas, margaritas & homemade flour tortillas draw crowds to this established Tex-Mex destination.' +
+            '</p><b><a href="http://www.alamocafe.com/menu/"'+
+            ' target="_blank">Click to see menu.</a></b>' +
+            '<img src="http://megasystemsinc.com/wp-content/uploads/2015/01/img278.jpg" style="width: 90%">' +
+            '<img src="http://mclifesanantonio.com/wp-content/uploads/2015/07/alamo-cafe-5.jpg" style="width: 90%">' +
+            '</div></div>', 29.571378, -98.478813, 2],
+
+            ['<div class="infoWindow">'+
+            '<h1 class="firstHeading">Dough Napoletana Pizzeria</h1><hr>'+
+            '<div class="bodyContent">' +
+            '<p><b>6989 Blanco Rd, San Antonio, TX 78216<br>'+
+            ' 10:45 A.M. to 11:00 P.M, 12AM (FRI & SAT)</b></p>'+
+            '<p><b><a href="http://www.doughpizzeria.com/" target="_blank">Dough</a></b>' +
+            ' is a buzzy eatery with authentic Neapolitan pizzas, salads, housemade burrata & an all-Italian wine list.' +
+            '<img src="http://www.doughpizzeria.com/images/uploads/161/dough_remod_8__banner.jpg" style="width: 90%">' +
+            '<img src="http://www.doughpizzeria.com/images/uploads/2/home_banner_2__banner.jpg" style="width: 90%">' +
+            '</div></div>', 29.519353, -98.507240, 1]
+        ];
+
+        function showMultipleMarkers() {
+            map = new google.maps.Map(document.getElementById('map_canvas'), {
+                zoom: 12,
+                center: new google.maps.LatLng(29.55, -98.49),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var numberOfMarkers = restaurants.length;
+
+            for (var i = 0; i < numberOfMarkers; i++) {
+                markers[i] = new google.maps.Marker({
+                    position: {lat: restaurants[i][1], lng: restaurants[i][2]},
+                    map: map,
+                    html: restaurants[i][0],
+                    id: i,
+                    animation: google.maps.Animation.DROP
+                });
+
+                google.maps.event.addListener(markers[i], 'click', function () {
+                    var infowindow = new google.maps.InfoWindow({
+                        id: this.id,
+                        content: this.html,
+                        position: this.getPosition()
+                    });
+                    google.maps.event.addListenerOnce(infowindow, 'closeclick', function () {
+                        markers[this.id].setVisible(true);
+                    });
+                    this.setVisible(false);
+                    infowindow.open(map);
+
+
+                });
+
+            }
+        }
+
+showMultipleMarkers();
+})();
+</script>
+</body>
+</html>
