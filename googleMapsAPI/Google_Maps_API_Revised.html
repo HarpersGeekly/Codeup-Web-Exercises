@@ -18,9 +18,9 @@
             text-align: center;
             font-size: 16px;
         }
-        /*#infoWindow {*/
-        /*}*/
-
+        .images {
+            width: 90%;
+        }
     </style>
 </head>
 <body>
@@ -29,8 +29,6 @@
 <div id="map-canvas"></div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdEhJIIBoaAFGkkOlpPjqJwRLgjQOKOfg"></script>
 <script type="text/javascript">
-
-
     (function() {
         "use strict";
 
@@ -54,8 +52,8 @@
                 linkToWebsite:"http://www.magnoliapancakehaus.com/",
                 linkToMenu:"http://www.magnoliapancakehaus.com/download/Magnolia%20Pancake%20Haus%20Menu.2015.pdf?inline",
                 image1:"http://qhhc4lhx2vj36rdg.zippykid.netdna-cdn.com/wp-content/uploads/Commercial-Magnolia-Pancake-Haus.jpg",
-                image2:"http://goodtaste.tv/wp-content/uploads/2016/05/Magnolia-Pancake--1024x681.jpg"
-
+                image2:"http://goodtaste.tv/wp-content/uploads/2016/05/Magnolia-Pancake--1024x681.jpg",
+                icon: "http://www.iconarchive.com/download/i107466/google/noto-emoji-food-drink/32376-pancakes.ico"
             },
 
             {   name: "Alamo Cafe",
@@ -65,16 +63,18 @@
                 linkToWebsite:"http://www.alamocafe.com/",
                 linkToMenu:"http://www.alamocafe.com/menu/",
                 image1:"http://megasystemsinc.com/wp-content/uploads/2015/01/img278.jpg",
-                image2:"http://mclifesanantonio.com/wp-content/uploads/2015/07/alamo-cafe-5.jpg"
+                image2:"http://mclifesanantonio.com/wp-content/uploads/2015/07/alamo-cafe-5.jpg",
+                icon: "https://cdn0.iconfinder.com/data/icons/junk-food-emoji-set/100/Taco-512.png"
             },
             {   name:"Dough Napoletana Pizzeria",
                 address:"6989 Blanco Rd, San Antonio, TX, 78216",
                 hoursOperation: "10:45 A.M. to 11:00 P.M, 12AM (FRI & SAT)",
                 description: "is a buzzy eatery with authentic Neapolitan pizzas, salads, housemade burrata & an all-Italian wine list.",
                 linkToWebsite:"http://www.doughpizzeria.com/",
-                linkToMenu:"",
+                linkToMenu:"http://www.doughpizzeria.com/",
                 image1:"http://www.doughpizzeria.com/images/uploads/161/dough_remod_8__banner.jpg",
-                image2:"http://www.doughpizzeria.com/images/uploads/2/home_banner_2__banner.jpg"
+                image2:"http://www.doughpizzeria.com/images/uploads/2/home_banner_2__banner.jpg",
+                icon: "https://cdn0.iconfinder.com/data/icons/restaurant-53/64/Food-junk-pizza-fast_food-512.png"
             }
 ];
         let geocoder = new google.maps.Geocoder();
@@ -82,11 +82,15 @@
         restaurants.forEach((restaurant) => {
 
             geocoder.geocode({"address": restaurant.address}, ((results, status) => {
-                if (status == google.maps.GeocoderStatus.OK) {
+                if (status === google.maps.GeocoderStatus.OK) {
                         let marker = new google.maps.Marker({
                         position: results[0].geometry.location,
                         animation: google.maps.Animation.DROP,
-                        map: map1
+                            icon: {
+                                url: restaurant.icon,
+                                scaledSize: new google.maps.Size(64, 64)
+                            },
+                            map: map1,
                    });
                        let infoWindow = new google.maps.InfoWindow({
                         content: '<div id="infoWindow">'+
@@ -95,8 +99,8 @@
                         '<p><b>' + restaurant.address + '<br>'+ restaurant.hoursOperation + '</b></p>' +
                         '<p><b><a href="' + restaurant.linkToWebsite + '" target="_blank">' + restaurant.name + '</a></b> ' + restaurant.description +'</p>' +
                         '<b><a href="' + restaurant.linkToMenu + '" target="_blank">Click to see menu (if available)</a></b>' +
-                        '<img src="' + restaurant.image1 + '" style="width: 90%">' +
-                        '<img src="' + restaurant.image2 + '" style="width: 90%">' +
+                        '<img class="images" src="' + restaurant.image1 + '">' +
+                        '<img class="images" src="' + restaurant.image2 + '">' +
                         '</div></div>'
                        });
                 marker.addListener('click', () => {
