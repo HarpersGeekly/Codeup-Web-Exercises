@@ -85,7 +85,7 @@
 
         var magnolia = { lat: 29.564166, lng: -98.488887 };
         // Add the marker to our existing map
-        var contentMagnolia = '<div id="infoWindow">'+
+        var magnoliaContent = '<div id="infoWindow">'+
                 '<h1 id="firstHeading">Magnolia Pancake Haus</h1><hr>'+
                 '<div id="bodyContent">' +
                 '<p><b>Embassy Oaks Shopping Center, 606 Embassy Oaks #100, San Antonio, TX, 78216<br>'+
@@ -99,7 +99,7 @@
                 '</div></div>';
 
         var infoWindow = new google.maps.InfoWindow({
-            content: contentMagnolia
+            content: magnoliaContent
         });
 
         var marker = new google.maps.Marker({
@@ -107,7 +107,7 @@
             animation: google.maps.Animation.DROP,
             map: map1
         });
-        marker.addListener('click', function() {
+        marker.on('click', function() {
             infoWindow.open(map1, marker);
         });
 
@@ -118,7 +118,7 @@
                 marker.setAnimation(google.maps.Animation.BOUNCE);
             }
         }
-        marker.addListener('click', toggleBounce);
+        marker.on('click', toggleBounce);
 
     })();
 </script>
