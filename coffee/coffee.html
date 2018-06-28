@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <!--<link rel="stylesheet" href="style.css"/>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"/>
@@ -13,6 +14,10 @@
         body {
             width: 100%;
             background: url("https://raw.githubusercontent.com/marcy-cooper-scott/coffee-project/master/images/coffe-beans-light.jpg") fixed;
+        }
+
+        #coffee-giphy {
+            width: 20%;
         }
 
         #welcome {
@@ -45,13 +50,13 @@
 
 </head>
 <body>
-<header class="col s12 header">
+<header class="header">
     <div class="row">
-        <div class="col s7 push-s5">
-            <img src="https://raw.githubusercontent.com/marcy-cooper-scott/coffee-project/master/images/coffee-gif.gif"/>
+        <div class="col s6">
+            <img class="responsive-img right" id="coffee-giphy" src="https://raw.githubusercontent.com/marcy-cooper-scott/coffee-project/master/images/coffee-gif.gif"/>
         </div>
-        <div class="col s5 pull-s7">
-            <h1 id="welcome">Coffee!</h1>
+        <div class="col s6">
+            <h1 class="left" id="welcome">Coffee!</h1>
         </div>
     </div>
 </header>
