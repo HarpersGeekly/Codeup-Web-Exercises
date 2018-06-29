@@ -32,6 +32,10 @@
             height: 268px;
         }
 
+        .hidden {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -43,8 +47,8 @@
 <script>
     "use strict";
 
-    var inputs = [];
-    var konamiCode = "38,38,40,40,37,39,37,39,66,65";
+    let inputs = [];
+    let konamiCode = "38,38,40,40,37,39,37,39,66,65";
 
     $(document).keyup(function(event){
 
@@ -56,14 +60,14 @@
 
             // let's have fun
             $('body').css("background-image", "url('https://media.giphy.com/media/7H5PxliIVN5i8/giphy.gif')");
-            setTimeout(function () {
+            setTimeout(() => {
                 location.reload(true);
             }, 4000);
-            
-            $("h1").css("display", "none");
-            $("p").css("display", "none");
-            $("#shia").css("display", "none");
-            setTimeout(function () {
+
+            $("h1").addClass('hidden');
+            $("p").addClass('hidden');
+            $("#shia").addClass('hidden');
+            setTimeout(() => {
                 location.reload(true);
             }, 4000);
         }
