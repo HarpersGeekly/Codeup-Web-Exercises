@@ -55,12 +55,14 @@
         if(inputs.toString().indexOf(konamiCode) >= 0) {
 
             // let's have fun
-            document.body.style.backgroundImage =
-                    "url('https://media.giphy.com/media/7H5PxliIVN5i8/giphy.gif')";
+            $('body').css("background-image", "url('https://media.giphy.com/media/7H5PxliIVN5i8/giphy.gif')");
             setTimeout(function () {
                 location.reload(true);
             }, 4000);
-            document.getElementById("shia").src = "";
+            
+            $("h1").css("display", "none");
+            $("p").css("display", "none");
+            $("#shia").css("display", "none");
             setTimeout(function () {
                 location.reload(true);
             }, 4000);
