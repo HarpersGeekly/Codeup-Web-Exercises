@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorted Name generator</title>
+</head>
+<body>
+<script>
+
+    let firstNames = ['Ryan', 'Tyler', 'Brad', 'Gideon'];
+    let lastNames = ['Hinton', 'Harper', 'Rogers', 'Goode'];
+
+    let nameGenerator = function(firstNames, lastNames) {
+
+        let objects = [];
+        firstNames.sort();
+        lastNames.sort();
+
+        for (let i = 0; i < firstNames.length; i++) {
+            // Long Version:
+            let firstName = firstNames[i];
+            let lastName = lastNames[i];
+            let object = {
+                firstName: firstName,
+                lastName: lastName
+            };
+            objects.push(object);
+
+            // Short Version:
+            // objects.push({firstName: firstNames[i], lastName: lastNames[i]})
+        }
+        console.log(objects);
+        return objects;
+    };
+
+    nameGenerator(firstNames, lastNames);
+
+</script>
+</body>
+</html>
