@@ -50,10 +50,10 @@
     let inputs = [];
     let konamiCode = "38,38,40,40,37,39,37,39,66,65";
 
-    $(document).keyup(function(event){
+    $(document).keyup(function(key){
 
         //putting ("pushing") the values of the event keyCode (what users press) into the new array 'inputs'.
-        inputs.push(event.keyCode);
+        inputs.push(key.keyCode);
 
         // this converts the user inputs array into a string and checks if it matches the konamiCode string
         if(inputs.toString().indexOf(konamiCode) >= 0) {
