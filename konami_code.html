@@ -57,7 +57,8 @@
         inputs.push(key.keyCode);
 
         // this converts the user inputs array into a string and checks if it matches the konamiCode string
-        if(inputs.toString().indexOf(konamiCode) >= 0) {
+        // without ">= 0", it will complete after each keyup.
+        if(inputs.toString().indexOf(konamiCode) >= 0 ) {
 
             // let's have fun
             $('body').css("background-image", "url('https://media.giphy.com/media/7H5PxliIVN5i8/giphy.gif')");
