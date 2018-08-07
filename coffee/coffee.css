@@ -21,6 +21,21 @@ body {
     background-color: rgb(245, 244, 225);
 }
 
+.banner {
+    display: flex;
+}
+
+.coffee-wrapper {
+    display: flex;
+}
+
+.coffee-row {
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
 label {
     color:black;
 }
@@ -52,3 +67,21 @@ li {
 .select-dropdown {
     font-family: 'Merienda', cursive;
 }
+
+@media screen and (max-width: 600px) {
+
+    #coffee-giphy {
+        width: 100%;
+    }
+
+    .coffee-wrapper {
+        display: block;
+    }
+
+    #add-coffee {
+        float: right;
+    }
+
+}
+
+
